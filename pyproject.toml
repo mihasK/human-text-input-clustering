@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "human-text-input-clustering"
+version = "0.1.0"
+description = ""
+authors = ["mihas <mihasK@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "human_text_input_clustering"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sklearn-pandas = "^2.2.0"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
