@@ -188,6 +188,8 @@ def on_search_table(f_input, f_type, f_score, f_column, fuzzy_preprocessor_selec
         # rdf = df[
         #     df['text_input'].str.contains(f_input.lower(), regex=False)
         # ]
+    else:
+        rdf.loc[:,SCORE_COLUMN] = 0  # clean this column
     return rdf.to_dict('records')
 
 

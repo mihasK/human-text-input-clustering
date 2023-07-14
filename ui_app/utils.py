@@ -39,4 +39,6 @@ fuzz_funcs = {
     'QRatio': fuzz.QRatio,
     'token_ratio': fuzz.token_ratio,
     'partial_ratio': fuzz.token_ratio,
+    'token_set_ratio': fuzz.token_set_ratio,
+    'token_sort_ratio': fuzz.token_sort_ratio,
 }
