@@ -6,11 +6,20 @@ import dash
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 from loguru import logger
+from icecream import ic
 
-df = pd.read_csv('./data/data_57.csv')
+CLUSTER_COLUMN = 'cluster'
+SCORE_COLUMN = 'search_score'
+
+
+
+df = pd.read_csv('./data/data_57.csv').dropna(subset=['text_input'])
+df.drop(['id', 'Unnamed: 0'], inplace=True, axis=1)
+df[SCORE_COLUMN] = 0
 
 logger.info(str(df.shape))
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
 
 
 
@@ -57,7 +66,7 @@ modal = html.Div(
             [
                 dbc.ModalHeader(dbc.ModalTitle("Set cluster")),
                 dbc.ModalBody([
-                    dbc.Input(type='text')
+                    dbc.Input(type='text'),
                 ]),
                 dbc.ModalFooter(
                     [
@@ -92,18 +101,103 @@ def toggle_modal(n1, n2, is_open):
 #         html.Div(
 #             [
 
+from .utils import fuzz_funcs
+ALL_CLUSTERS_FILTER_LABEL = '--ALL--'
+NOT_SPECIFIED_CLUSTER_F_LABEL = '--NOT SPECIFIED--'
+filters_input = [
+    dbc.Col(dbc.InputGroup(
+        [
+            dbc.Select(
+                value=list(fuzz_funcs.keys())[0],
+                id='fuzzy-type',
+                options=[
+                    {"label": k.title(), "value": k }
+                    for k, v in fuzz_funcs.items()
+                    # {"label": "Option 2", "value": 2},
+                ]
+            ),
+            dbc.InputGroupText("min score:"),
+            dbc.Input(id='fuzzy-score', type="number", min=0, max=100, step=1, value=60),
+        ]
+    ), md=3),
+    dbc.Col(dbc.InputGroup(
+        [
+            dbc.Input(id='fuzzy-input', placeholder='Input for fuzzy search',    html_size=50),
+            dbc.InputGroupText("for column:"),
+            dbc.Select(
+                value='text_input',
+                options=df.columns,
+                id='fuzzy-column'
+            )
+
+        ]), md=5),
+    
+    dbc.Col(dbc.InputGroup([
+        dbc.InputGroupText('Cluster'),
+        dbc.Select(id='cluster-filter',
+                   options=[ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df[CLUSTER_COLUMN].dropna().unique()),
+                   value=ALL_CLUSTERS_FILTER_LABEL)
+    ]), md=3)
+
+]
+from functools import partial
+
+
+@app.callback(
+    Output('df-table', 'data'),
+    [
+        Input('fuzzy-input', 'value'),
+        Input('fuzzy-type', 'value'),
+        Input('fuzzy-score', 'value'),
+        Input('fuzzy-column', 'value'),
+        Input('cluster-filter', 'value'),
+    ]
+)
+def on_search_table(f_input, f_type, f_score, f_column, cluster_filter):
+    ic(f_input, f_type, f_score)
+    rdf = df
+    
+    if cluster_filter == NOT_SPECIFIED_CLUSTER_F_LABEL:
+        # rdf = rdfdropna(subset=[CLUSTER_COLUMN])
+        rdf = rdf[rdf[CLUSTER_COLUMN].isnull()]
+    elif cluster_filter != ALL_CLUSTERS_FILTER_LABEL:
+        rdf = rdf[
+            rdf[CLUSTER_COLUMN] == cluster_filter
+        ]
+    
+    if f_input:
+        score_func = partial(
+            fuzz_funcs[f_type],
+            s2=f_input,
+            score_cutoff=f_score
+        )
+        rdf[SCORE_COLUMN] = rdf[f_column].apply(score_func).round(1)
+        rdf = rdf[
+            rdf[SCORE_COLUMN] > 0
+        ]
+        # rdf = df[
+        #     df['text_input'].str.contains(f_input.lower(), regex=False)
+        # ]
+    return rdf.to_dict('records')
+
+
+
+
 app.layout = html.Div([
     html.H1(children='Cluster text records', style={'textAlign':'center'}),
     # dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
     # dcc.Graph(id='graph-content')
     modal,
     dbc.Container([
+        
+        dbc.Row( filters_input ),
+        html.Hr(),
 
         dbc.Row(
             table,    
         ),
         
-        
+        html.Hr(),
         dbc.Row([
             
             dbc.Col([
@@ -132,7 +226,15 @@ app.layout = html.Div([
                     className="position-relative",
                     id='button-set'
                 )
-            ], md=4)
+            ], md=4),
+            
+            dbc.Col([
+                dbc.Card([
+                    html.Small(['Records: ', html.B(id='num-records')]),
+                    html.Small(['Clusters: ', html.B(id='num-clusters')]),
+                    html.Small(['Not clustered: ', html.B(id='num-not-clustered')]),
+                ])
+            ], md=3)
             
             
         ]),
@@ -143,13 +245,30 @@ app.layout = html.Div([
 
 
 @app.callback(
+    [
+        Output('num-records', 'children'),
+        Output('num-clusters', 'children'),
+        Output('num-not-clustered', 'children'),
+    ],
+    Input('df-table', 'data')
+)
+def update_stats(data):
+    xdf = pd.DataFrame(data)
+    return (
+        (total:=xdf.shape[0]),
+        len(xdf[CLUSTER_COLUMN].dropna().unique()) if total else 0,
+        xdf[CLUSTER_COLUMN].isnull().sum() if total else 0,
+    )
+
+@app.callback(
     Output("badge-selected", "children"),
     Input("df-table", "selected_rows")
 )
 def update_num_selected(selected_rows):
+
     
     return str(
-        len(selected_rows)
+        len(selected_rows),
     )
 
 
