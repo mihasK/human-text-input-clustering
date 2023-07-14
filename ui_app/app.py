@@ -101,18 +101,18 @@ def toggle_modal(n1, n2, is_open):
 #         html.Div(
 #             [
 
-from .utils import fuzz_funcs
+from . import utils
 ALL_CLUSTERS_FILTER_LABEL = '--ALL--'
 NOT_SPECIFIED_CLUSTER_F_LABEL = '--NOT SPECIFIED--'
 filters_input = [
     dbc.Col(dbc.InputGroup(
         [
             dbc.Select(
-                value=list(fuzz_funcs.keys())[0],
+                value=list(utils.fuzz_funcs.keys())[0],
                 id='fuzzy-type',
                 options=[
                     {"label": k.title(), "value": k }
-                    for k, v in fuzz_funcs.items()
+                    for k, v in utils.fuzz_funcs.items()
                     # {"label": "Option 2", "value": 2},
                 ]
             ),
@@ -120,6 +120,13 @@ filters_input = [
             dbc.Input(id='fuzzy-score', type="number", min=0, max=100, step=1, value=60),
         ]
     ), md=3),
+    dbc.Col(dbc.InputGroup(
+        [
+            # dbc.InputGroupText("Preprocess:"),
+            # dbc.Checkbox( value=True, id='preproccessor-checkbox' ),
+            dbc.Select(options=['plain', 'preprocces'], value='plain', id='fuzzy_preprocessor_select'),
+        ]),
+            md=1),
     dbc.Col(dbc.InputGroup(
         [
             dbc.Input(id='fuzzy-input', placeholder='Input for fuzzy search',    html_size=50),
@@ -150,10 +157,11 @@ from functools import partial
         Input('fuzzy-type', 'value'),
         Input('fuzzy-score', 'value'),
         Input('fuzzy-column', 'value'),
+        Input('fuzzy_preprocessor_select', 'value'),
         Input('cluster-filter', 'value'),
     ]
 )
-def on_search_table(f_input, f_type, f_score, f_column, cluster_filter):
+def on_search_table(f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter):
     ic(f_input, f_type, f_score)
     rdf = df
     
@@ -166,12 +174,14 @@ def on_search_table(f_input, f_type, f_score, f_column, cluster_filter):
         ]
     
     if f_input:
+        processor = None if fuzzy_preprocessor_select == 'plain' else utils.preprocess
         score_func = partial(
-            fuzz_funcs[f_type],
+            utils.fuzz_funcs[f_type],
             s2=f_input,
-            score_cutoff=f_score
+            score_cutoff=f_score,
+            processor=processor
         )
-        rdf[SCORE_COLUMN] = rdf[f_column].apply(score_func).round(1)
+        rdf.loc[:,SCORE_COLUMN] = rdf[f_column].apply(score_func).round(1)
         rdf = rdf[
             rdf[SCORE_COLUMN] > 0
         ]
