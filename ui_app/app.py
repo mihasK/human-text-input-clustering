@@ -13,21 +13,36 @@ SCORE_COLUMN = 'search_score'
 
 
 
-df = pd.read_csv('./data/data_57.csv').dropna(subset=['text_input'])
-df.drop(['id', 'Unnamed: 0'], inplace=True, axis=1)
-df[SCORE_COLUMN] = 0
+import pathlib
 
-logger.info(str(df.shape))
+ic(__file__)
+data_dir = pathlib.Path(__file__).parent / 'data'
+
+data_list = ic(
+    list(data_dir.iterdir())
+)
+ 
+
+def _load_df(d_name):
+    logger.info(f'{d_name} data selected')
+    return pd.read_csv(data_dir / d_name)
+    
+# df_original = pd.read_csv('./data/data_57.csv').dropna(subset=['text_input'])
+# df_original.drop(['id', 'Unnamed: 0'], inplace=True, axis=1)
+# df_original[SCORE_COLUMN] = 0
+
+# logger.info(str(df_original.shape))
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
 
 
 table =  dash_table.DataTable(
-    df.to_dict('records'), 
-    [{"name": i, "id": i, 'hideable':True} for i in df.columns],
-        editable=True,
+    # df_original.to_dict('records'), 
+    # [{"name": i, "id": i, 'hideable':True} for i in df_original.columns],
+        editable=False,
         filter_action="native",
+        # filter_action="custom",
         sort_action="native",
         sort_mode="multi",
         column_selectable="single",
@@ -40,8 +55,14 @@ table =  dash_table.DataTable(
         # page_action='none',
         fixed_rows={'headers': True},
 
-        style_table={'height': '500px', 'overflowY': 'auto'},
-        
+        style_table={'height': '500px', 'overflowY': 'auto',
+
+                     },
+        style_data={
+            'width': '150px', 'minWidth': '150px', 'maxWidth': '150px',
+            'overflow': 'hidden',
+            'textOverflow': 'ellipsis',
+        },
         # style_data_conditional=         [
         #     {
         #         'if': {
@@ -133,7 +154,7 @@ filters_input = [
             dbc.InputGroupText("for column:"),
             dbc.Select(
                 value='text_input',
-                options=df.columns,
+                # options=df_original.columns,
                 id='fuzzy-column'
             )
 
@@ -142,17 +163,40 @@ filters_input = [
     dbc.Col(dbc.InputGroup([
         dbc.InputGroupText('Cluster'),
         dbc.Select(id='cluster-filter',
-                   options=[ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df[CLUSTER_COLUMN].dropna().unique()),
+                #    options=[ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df_original[CLUSTER_COLUMN].dropna().unique()),
                    value=ALL_CLUSTERS_FILTER_LABEL)
     ]), md=3)
 
 ]
+
+
+@app.callback(
+    [
+        Output('fuzzy-column', 'options'),
+        Output('cluster-filter', 'options'),
+    ],
+    Input('data_select', 'value')
+)
+def update_columns(d_name):
+    if not d_name:
+        return (None, None)
+    df = _load_df(d_name)
+    return (
+        df.columns,
+        [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df[CLUSTER_COLUMN].dropna().unique())
+    )
+
 from functools import partial
 
 
 @app.callback(
-    Output('df-table', 'data'),
     [
+        Output('df-table', 'data'),
+        Output('df-table', 'columns'),
+    ],
+    # Output('df-table', 'derived_virtual_data'),
+    [
+        Input('data_select', 'value'),
         Input('fuzzy-input', 'value'),
         Input('fuzzy-type', 'value'),
         Input('fuzzy-score', 'value'),
@@ -161,9 +205,13 @@ from functools import partial
         Input('cluster-filter', 'value'),
     ]
 )
-def on_search_table(f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter):
+def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter):
+    
+    if not d_name:
+        d_name = data_list[0].name
+    
     ic(f_input, f_type, f_score)
-    rdf = df
+    rdf = _load_df(d_name)
     
     if cluster_filter == NOT_SPECIFIED_CLUSTER_F_LABEL:
         # rdf = rdfdropna(subset=[CLUSTER_COLUMN])
@@ -190,17 +238,39 @@ def on_search_table(f_input, f_type, f_score, f_column, fuzzy_preprocessor_selec
         # ]
     else:
         rdf.loc[:,SCORE_COLUMN] = 0  # clean this column
-    return rdf.to_dict('records')
+    return (
+        rdf.to_dict('records'),
+        [{"name": i, "id": i, 'hideable':True} for i in rdf.columns]
+    )
 
 
 
 
 app.layout = html.Div([
-    html.H1(children='Cluster text records', style={'textAlign':'center'}),
-    # dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-    # dcc.Graph(id='graph-content')
-    modal,
     dbc.Container([
+        dbc.Row([
+            dbc.Col(
+                html.H1(children='Cluster text records', style={'textAlign':'center'}),
+                # width=9
+            ),
+            
+            dbc.Col(
+                
+                dbc.InputGroup([
+                    dbc.InputGroupText('Selected Data:'),
+                    dbc.Select(
+                        options=[f.name for f in data_list],
+                        id='data_select'
+                    ),
+                ]),
+                
+                width=4
+            )
+        ]),
+        # dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
+        # dcc.Graph(id='graph-content')
+        modal,
+
         
         dbc.Row( filters_input ),
         html.Hr(),
@@ -252,7 +322,6 @@ app.layout = html.Div([
         ]),
     ])
     
-
 ])
 
 
@@ -261,6 +330,7 @@ app.layout = html.Div([
         Output('num-records', 'children'),
         Output('num-clusters', 'children'),
         Output('num-not-clustered', 'children'),
+        # Output('cluster-filter', 'options'),
     ],
     Input('df-table', 'data')
 )
@@ -270,6 +340,9 @@ def update_stats(data):
         (total:=xdf.shape[0]),
         len(xdf[CLUSTER_COLUMN].dropna().unique()) if total else 0,
         xdf[CLUSTER_COLUMN].isnull().sum() if total else 0,
+        # [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + (
+        #     list(xdf[CLUSTER_COLUMN].dropna().unique()) if total else []
+        # )
     )
 
 @app.callback(
