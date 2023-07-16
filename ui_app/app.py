@@ -7,25 +7,23 @@ from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 from loguru import logger
 from icecream import ic
+from . import utils
+from functools import partial
+
+
+from . import data_utils
+
+from .layout import layout
+
 
 CLUSTER_COLUMN = 'cluster'
 SCORE_COLUMN = 'search_score'
 
+ALL_CLUSTERS_FILTER_LABEL = '--ALL--'
+NOT_SPECIFIED_CLUSTER_F_LABEL = '--NOT SPECIFIED--'
 
 
-import pathlib
 
-ic(__file__)
-data_dir = pathlib.Path(__file__).parent / 'data'
-
-data_list = ic(
-    list(data_dir.iterdir())
-)
- 
-
-def _load_df(d_name):
-    logger.info(f'{d_name} data selected')
-    return pd.read_csv(data_dir / d_name)
     
 # df_original = pd.read_csv('./data/data_57.csv').dropna(subset=['text_input'])
 # df_original.drop(['id', 'Unnamed: 0'], inplace=True, axis=1)
@@ -33,74 +31,7 @@ def _load_df(d_name):
 
 # logger.info(str(df_original.shape))
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-
-
-
-
-table =  dash_table.DataTable(
-    # df_original.to_dict('records'), 
-    # [{"name": i, "id": i, 'hideable':True} for i in df_original.columns],
-        editable=False,
-        filter_action="native",
-        # filter_action="custom",
-        sort_action="native",
-        sort_mode="multi",
-        column_selectable="single",
-        row_selectable="multi",
-        selected_columns=[],
-        selected_rows=[],
-        # page_action="native",
-        # page_current= 0,
-        page_size= 100,
-        # page_action='none',
-        fixed_rows={'headers': True},
-
-        style_table={'height': '500px', 'overflowY': 'auto',
-
-                     },
-        style_data={
-            'width': '150px', 'minWidth': '150px', 'maxWidth': '150px',
-            'overflow': 'hidden',
-            'textOverflow': 'ellipsis',
-        },
-        # style_data_conditional=         [
-        #     {
-        #         'if': {
-        #             'filter_query': '{cluster} is nil',
-        #         },
-        #         'backgroundColor': 'white',
-        #         # 'color': 'white'
-        #     },
-        # ],
-        id='df-table',
-        css =[
-            # {'selector':'.dash-spreadsheet-menu','rule':'position:absolute;bottom:-30px'}, #move below table
-            # {'selector':'.show-hide','rule':'font-family:Impact'}, #change font
-        ]
-)
-
-
-
-modal = html.Div(
-    [
-        dbc.Modal(
-            [
-                dbc.ModalHeader(dbc.ModalTitle("Set cluster")),
-                dbc.ModalBody([
-                    dbc.Input(type='text'),
-                ]),
-                dbc.ModalFooter(
-                    [
-                        dbc.Button("Update records", id="update", className="ms-auto", n_clicks=0),
-                        dbc.Button("Close", id="close", className="ms-auto", n_clicks=0)
-                    ]
-                ),
-            ],
-            id="modal",
-            is_open=False,
-        ),
-    ]
-)
+app.layout = layout
 
 
 @app.callback(
@@ -122,52 +53,6 @@ def toggle_modal(n1, n2, is_open):
 #         html.Div(
 #             [
 
-from . import utils
-ALL_CLUSTERS_FILTER_LABEL = '--ALL--'
-NOT_SPECIFIED_CLUSTER_F_LABEL = '--NOT SPECIFIED--'
-filters_input = [
-    dbc.Col(dbc.InputGroup(
-        [
-            dbc.Select(
-                value=list(utils.fuzz_funcs.keys())[0],
-                id='fuzzy-type',
-                options=[
-                    {"label": k.title(), "value": k }
-                    for k, v in utils.fuzz_funcs.items()
-                    # {"label": "Option 2", "value": 2},
-                ]
-            ),
-            dbc.InputGroupText("min score:"),
-            dbc.Input(id='fuzzy-score', type="number", min=0, max=100, step=1, value=60),
-        ]
-    ), md=3),
-    dbc.Col(dbc.InputGroup(
-        [
-            # dbc.InputGroupText("Preprocess:"),
-            # dbc.Checkbox( value=True, id='preproccessor-checkbox' ),
-            dbc.Select(options=['plain', 'preprocces'], value='plain', id='fuzzy_preprocessor_select'),
-        ]),
-            md=1),
-    dbc.Col(dbc.InputGroup(
-        [
-            dbc.Input(id='fuzzy-input', placeholder='Input for fuzzy search',    html_size=50),
-            dbc.InputGroupText("for column:"),
-            dbc.Select(
-                value='text_input',
-                # options=df_original.columns,
-                id='fuzzy-column'
-            )
-
-        ]), md=5),
-    
-    dbc.Col(dbc.InputGroup([
-        dbc.InputGroupText('Cluster'),
-        dbc.Select(id='cluster-filter',
-                #    options=[ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df_original[CLUSTER_COLUMN].dropna().unique()),
-                   value=ALL_CLUSTERS_FILTER_LABEL)
-    ]), md=3)
-
-]
 
 
 @app.callback(
@@ -180,13 +65,14 @@ filters_input = [
 def update_columns(d_name):
     if not d_name:
         return (None, None)
-    df = _load_df(d_name)
+    df = data_utils.load_df(d_name)
     return (
         df.columns,
         [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df[CLUSTER_COLUMN].dropna().unique())
     )
 
-from functools import partial
+
+from snoop import snoop
 
 
 @app.callback(
@@ -205,18 +91,20 @@ from functools import partial
         Input('cluster-filter', 'value'),
     ]
 )
+# @snoop()
 def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter):
     
+    ic(d_name)
     if not d_name:
-        d_name = data_list[0].name
+        d_name =data_utils.data_list[0].name
     
     ic(f_input, f_type, f_score)
-    rdf = _load_df(d_name)
+    rdf = data_utils.load_df(d_name)
     
     if cluster_filter == NOT_SPECIFIED_CLUSTER_F_LABEL:
         # rdf = rdfdropna(subset=[CLUSTER_COLUMN])
         rdf = rdf[rdf[CLUSTER_COLUMN].isnull()]
-    elif cluster_filter != ALL_CLUSTERS_FILTER_LABEL:
+    elif cluster_filter and cluster_filter != ALL_CLUSTERS_FILTER_LABEL:
         rdf = rdf[
             rdf[CLUSTER_COLUMN] == cluster_filter
         ]
@@ -238,91 +126,12 @@ def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocess
         # ]
     else:
         rdf.loc[:,SCORE_COLUMN] = 0  # clean this column
+        
+    ic([{"name": i, "id": i, 'hideable':True} for i in rdf.columns])
     return (
         rdf.to_dict('records'),
         [{"name": i, "id": i, 'hideable':True} for i in rdf.columns]
     )
-
-
-
-
-app.layout = html.Div([
-    dbc.Container([
-        dbc.Row([
-            dbc.Col(
-                html.H1(children='Cluster text records', style={'textAlign':'center'}),
-                # width=9
-            ),
-            
-            dbc.Col(
-                
-                dbc.InputGroup([
-                    dbc.InputGroupText('Selected Data:'),
-                    dbc.Select(
-                        options=[f.name for f in data_list],
-                        id='data_select'
-                    ),
-                ]),
-                
-                width=4
-            )
-        ]),
-        # dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-        # dcc.Graph(id='graph-content')
-        modal,
-
-        
-        dbc.Row( filters_input ),
-        html.Hr(),
-
-        dbc.Row(
-            table,    
-        ),
-        
-        html.Hr(),
-        dbc.Row([
-            
-            dbc.Col([
-                dbc.ButtonGroup([
-                    dbc.Button('Select all', outline=True, color="primary", id='select-all-button'), 
-                    dbc.Button('Select all on current page', outline=True, color="primary", id='select-all-on-page-button'), 
-                    dbc.Button('Deselect all', outline=True, color="secondary", className="me-1", id='deselect-all-button'), 
-                ]),
-                
-            ], md=4),
-            
-            dbc.Col([
-                dbc.Button(
-                    [
-                        "Specify cluster",
-                        dbc.Badge(
-                            "0",
-                            color="danger",
-                            pill=True,
-                            text_color="white",
-                            className="position-absolute top-0 start-100 translate-middle",
-                            id="badge-selected"
-                        ),
-                    ],
-                    color="primary",
-                    className="position-relative",
-                    id='button-set'
-                )
-            ], md=4),
-            
-            dbc.Col([
-                dbc.Card([
-                    html.Small(['Records: ', html.B(id='num-records')]),
-                    html.Small(['Clusters: ', html.B(id='num-clusters')]),
-                    html.Small(['Not clustered: ', html.B(id='num-not-clustered')]),
-                ])
-            ], md=3)
-            
-            
-        ]),
-    ])
-    
-])
 
 
 @app.callback(
