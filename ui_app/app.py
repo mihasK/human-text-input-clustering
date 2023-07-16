@@ -35,18 +35,74 @@ app.layout = layout
 
 
 @app.callback(
-    Output("modal", "is_open"),
+    Output("modal_set_cluster", "is_open"),
     [
         Input("button-set", "n_clicks"), 
         Input("close", "n_clicks")
     ],
-    [State("modal", "is_open")],
+    [
+        State("modal_set_cluster", "is_open"),
+        
+    ],
 )
-def toggle_modal(n1, n2, is_open):
+def toggle_modal_set_cluster(n1, n2, is_open):
     if n1 or n2:
         return not is_open
     return is_open
 
+
+@app.callback(
+    Output("update_info", "children"),
+    Input("modal_set_cluster", "is_open"),
+    [
+        State('df-table', 'selected_rows'),
+        State('data_select', 'value'),
+    ]
+)
+def on_modal_set_cluster_open(is_open, selected_rows, data_select):
+    if not is_open:
+        return ''
+    
+    ic(selected_rows)
+    return f"Are you going to set cluster for the {len(selected_rows)} rows of the data {data_select}?"
+
+@app.callback(
+    Output("update_info", "children", allow_duplicate=True,),
+    [Input("update", "n_clicks")],
+    [
+        State('df-table', 'selected_rows'),
+        State('set_cluster_input', 'value'),
+        State('df-table', 'data'),
+        State('data_select', 'value'),
+
+    ],
+        prevent_initial_call=True
+
+)
+def on_button_update_cluster_click(n, selected_rows, set_cluster_input, all_rows_data, data_select):
+    
+    df_table = pd.DataFrame([
+        all_rows_data[i] for i in selected_rows
+    ]).drop([SCORE_COLUMN, CLUSTER_COLUMN], axis=1, errors='ignore')
+    ic(df_table.shape, df_table.columns)
+    
+    df_source = data_utils.load_df(data_select).drop([SCORE_COLUMN], axis=1, errors='ignore')
+    ic(df_source.shape, df_source.columns)
+    
+    ic(df_table.index)
+    # ic(df_source_index.index)
+    
+    
+    ic(df_source[CLUSTER_COLUMN].unique())
+    df_source.loc[
+        ic(df_table['_RID']), CLUSTER_COLUMN
+    ] = set_cluster_input
+    
+    
+    ic(df_source[CLUSTER_COLUMN].unique())
+    data_utils.write_df(df_source, d_name=data_select)
+    
+    return f"Successfully set cluster `{set_cluster_input}` for the {len(selected_rows)} rows."
 
 # stats = dbc.Card(
 #     [

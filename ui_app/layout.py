@@ -57,13 +57,17 @@ filters_input = [
 ]
 
 
-modal = html.Div(
+modal_set_cluster = html.Div(
     [
         dbc.Modal(
             [
                 dbc.ModalHeader(dbc.ModalTitle("Set cluster")),
                 dbc.ModalBody([
-                    dbc.Input(type='text'),
+                    html.Div(
+                        "Are you going to set cluster for the records?",
+                        id='update_info'
+                    ),
+                    dbc.Input(type='text', id='set_cluster_input'),
                 ]),
                 dbc.ModalFooter(
                     [
@@ -72,7 +76,7 @@ modal = html.Div(
                     ]
                 ),
             ],
-            id="modal",
+            id="modal_set_cluster",
             is_open=False,
         ),
     ]
@@ -80,11 +84,13 @@ modal = html.Div(
 
 
 
+df_initial = data_utils.load_df(data_utils.data_list[0])
+
 
 table =  dash_table.DataTable(
-    [{}], [],
-    # df_original.to_dict('records'), 
-    # [{"name": i, "id": i, 'hideable':True} for i in df_original.columns],
+    # [{}], [],
+    df_initial.to_dict('records'), 
+    [{"name": i, "id": i, 'hideable':True} for i in df_initial.columns],
         editable=False,
         filter_action="native",
         # filter_action="custom",
@@ -141,7 +147,8 @@ layout = html.Div([
                 dbc.InputGroup([
                     dbc.InputGroupText('Selected Data:'),
                     dbc.Select(
-                        options=[f.name for f in data_utils.data_list],
+                        options=(vals:=[f.name for f in data_utils.data_list]),
+                        value=vals[0] if vals else None,
                         id='data_select'
                     ),
                 ]),
@@ -151,7 +158,7 @@ layout = html.Div([
         ]),
         # dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
         # dcc.Graph(id='graph-content')
-        modal,
+        modal_set_cluster,
 
         
         dbc.Row( filters_input ),

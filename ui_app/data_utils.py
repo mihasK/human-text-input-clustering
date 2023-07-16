@@ -15,5 +15,17 @@ data_list = ic(
 
 def load_df(d_name):
     logger.info(f'{d_name} data selected')
-    return pd.read_csv(data_dir / d_name)
+    df = pd.read_csv(data_dir / d_name)
+    
+    
+    # (re)write _RID
+    df.drop(['_RID'], axis=1, errors='ignore', inplace=True)
+    df.insert(0, '_RID', df.index)  
+    
+    return df
 
+def write_df(df: pd.DataFrame, d_name):
+    logger.info(f'{d_name} data overwriten')
+    
+    df.to_csv(data_dir / d_name)
+    
