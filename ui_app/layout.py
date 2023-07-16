@@ -59,6 +59,10 @@ filters_input = [
 
 modal_set_cluster = html.Div(
     [
+        html.Datalist(
+            # children=[html.Option(x) for x in ['bittcoin', 'qark']],
+            id='cluster_autocomplete'
+        ),
         dbc.Modal(
             [
                 dbc.ModalHeader(dbc.ModalTitle("Set cluster")),
@@ -67,11 +71,14 @@ modal_set_cluster = html.Div(
                         "Are you going to set cluster for the records?",
                         id='update_info'
                     ),
-                    dbc.Input(type='text', id='set_cluster_input'),
+                    dbc.Input(type='text', 
+                              autocomplete=True,
+                              list='cluster_autocomplete',
+                              id='set_cluster_input'),
                 ]),
                 dbc.ModalFooter(
                     [
-                        dbc.Button("Update records", id="update", className="ms-auto", n_clicks=0),
+                        dbc.Button("Update records", id="update", className="ms-auto", color='danger', n_clicks=0),
                         dbc.Button("Close", id="close", className="ms-auto", n_clicks=0)
                     ]
                 ),

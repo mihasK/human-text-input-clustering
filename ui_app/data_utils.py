@@ -27,5 +27,5 @@ def load_df(d_name):
 def write_df(df: pd.DataFrame, d_name):
     logger.info(f'{d_name} data overwriten')
     
-    df.to_csv(data_dir / d_name)
+    df.to_csv(data_dir / d_name, index=False)
     

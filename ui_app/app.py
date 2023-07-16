@@ -67,7 +67,11 @@ def on_modal_set_cluster_open(is_open, selected_rows, data_select):
     return f"Are you going to set cluster for the {len(selected_rows)} rows of the data {data_select}?"
 
 @app.callback(
-    Output("update_info", "children", allow_duplicate=True,),
+    [
+        Output("update_info", "children", allow_duplicate=True,),
+        Output('data_select', 'value'),
+        Output('df-table', 'selected_rows', allow_duplicate=True),
+    ],
     [Input("update", "n_clicks")],
     [
         State('df-table', 'selected_rows'),
@@ -81,6 +85,12 @@ def on_modal_set_cluster_open(is_open, selected_rows, data_select):
 )
 def on_button_update_cluster_click(n, selected_rows, set_cluster_input, all_rows_data, data_select):
     
+    if not selected_rows:
+        return (
+            'No rows selected',
+            data_select,
+            []
+        )
     df_table = pd.DataFrame([
         all_rows_data[i] for i in selected_rows
     ]).drop([SCORE_COLUMN, CLUSTER_COLUMN], axis=1, errors='ignore')
@@ -102,7 +112,11 @@ def on_button_update_cluster_click(n, selected_rows, set_cluster_input, all_rows
     ic(df_source[CLUSTER_COLUMN].unique())
     data_utils.write_df(df_source, d_name=data_select)
     
-    return f"Successfully set cluster `{set_cluster_input}` for the {len(selected_rows)} rows."
+    return (
+        f"Successfully set cluster `{set_cluster_input}` for the {len(selected_rows)} rows.",
+        data_select,
+        []
+    )
 
 # stats = dbc.Card(
 #     [
@@ -115,16 +129,22 @@ def on_button_update_cluster_click(n, selected_rows, set_cluster_input, all_rows
     [
         Output('fuzzy-column', 'options'),
         Output('cluster-filter', 'options'),
+        Output('cluster_autocomplete', 'children'),
     ],
     Input('data_select', 'value')
 )
-def update_columns(d_name):
+def reload_datasource(d_name):
+    logger.debug('D source reload')
     if not d_name:
         return (None, None)
     df = data_utils.load_df(d_name)
+    
+    cc = list(df[CLUSTER_COLUMN].dropna().unique())
+              
     return (
         df.columns,
-        [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df[CLUSTER_COLUMN].dropna().unique())
+        [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + cc,
+        [html.Option(c) for c in cc]
     )
 
 
