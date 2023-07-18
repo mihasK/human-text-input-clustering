@@ -1,4 +1,4 @@
-_RID,id,text_input,cluster
+,id,text_input,cluster
 0,90678020,,
 1,90680390,,
 2,90683884,,
@@ -22,7 +22,7 @@ _RID,id,text_input,cluster
 20,90670294,2,
 21,90679455,3,
 22,90682023,4,
-23,90671054,500plus,Plus500
+23,90671054,500plus,
 24,90684001,56,
 25,90667277,7865r,
 26,90677227,8989,
@@ -31,73 +31,73 @@ _RID,id,text_input,cluster
 29,90671858,Aktien 24,
 30,90668221,Aktien Aktuell,
 31,90675775,Alisnz,
-32,90682481,All Börse,Börse
+32,90682481,All Börse,
 33,90667371,Allvest,
-34,90681936,amazon,Amazon
-35,90684814,amazon,Amazon
-36,90678775,Amazon,Amazon
-37,90675298,Amazon,Amazon
-38,90684143,Amazon,Amazon
-39,90680647,Amazon,Amazon
-40,90671842,an eine,keine
-41,90674644,an keine,keine
-42,90664594,an keine bestimmte zuerst,keine
-43,90684593,an nichts,Weiß nicht
-44,90662591,App,App
-45,90676741,Apple,Apple
-46,90674365,Apple,Apple
+34,90681936,amazon,
+35,90684814,amazon,
+36,90678775,Amazon,
+37,90675298,Amazon,
+38,90684143,Amazon,
+39,90680647,Amazon,
+40,90671842,an eine,
+41,90674644,an keine,
+42,90664594,an keine bestimmte zuerst,
+43,90684593,an nichts,
+44,90662591,App,
+45,90676741,Apple,
+46,90674365,Apple,
 47,90685189,Ativi,
 48,90661228,auch,
 49,90684392,AXA,
-50,90680332,bank,bank
-51,90679129,bank,bank
-52,90682119,Bank,bank
-53,90674268,Bank,bank
-54,90672179,Bank,bank
-55,90661505,Bank,bank
-56,90677125,Bank,bank
-57,90665230,Bank,bank
+50,90680332,bank,
+51,90679129,bank,
+52,90682119,Bank,
+53,90674268,Bank,
+54,90672179,Bank,
+55,90661505,Bank,
+56,90677125,Bank,
+57,90665230,Bank,
 58,90678280,Bank depot,
-59,90667490,banken,bank
-60,90663619,Banken,bank
-61,90685516,Banken,bank
-62,90663794,Banken,bank
+59,90667490,banken,
+60,90663619,Banken,
+61,90685516,Banken,
+62,90663794,Banken,
 63,90672332,Bankinstitut,
 64,90669869,Bet,
 65,90682374,Bet,
 66,90674836,Bevestor,
 67,90671553,Bfnfkd,
-68,90662046,binance,Binance
-69,90670489,binance,Binance
-70,90663465,binance,Binance
-71,90684761,Binance,Binance
-72,90662322,Binance,Binance
-73,90676936,Binance,Binance
-74,90679707,Binance,Binance
-75,90680306,Binance,Binance
-76,90676337,Binance,Binance
-77,90669431,Binance,Binance
-78,90677212,Binance,Binance
-79,90667572,Binance,Binance
-80,90678585,Binance,Binance
+68,90662046,binance,
+69,90670489,binance,
+70,90663465,binance,
+71,90684761,Binance,
+72,90662322,Binance,
+73,90676936,Binance,
+74,90679707,Binance,
+75,90680306,Binance,
+76,90676337,Binance,
+77,90669431,Binance,
+78,90677212,Binance,
+79,90667572,Binance,
+80,90678585,Binance,
 81,90680047,Bing X,
-82,90683500,Bison,Bison
+82,90683500,Bison,
 83,90663386,Bit,
-84,90663653,Bitcion,Bitcoin
-85,90664914,bitcoin,Bitcoin
-86,90664254,bitcoin,Bitcoin
-87,90667260,Bitcoin,Bitcoin
-88,90677959,Bitcoin,Bitcoin
-89,90678143,Bitcoin,Bitcoin
-90,90677169,Bitcoin,Bitcoin
-91,90678955,Bitcoin,Bitcoin
-92,90682345,Bitcoin,Bitcoin
-93,90668576,Bitcoin,Bitcoin
-94,90672025,Bitcoin,Bitcoin
-95,90677340,Bitcoin,Bitcoin
+84,90663653,Bitcion,
+85,90664914,bitcoin,
+86,90664254,bitcoin,
+87,90667260,Bitcoin,
+88,90677959,Bitcoin,
+89,90678143,Bitcoin,
+90,90677169,Bitcoin,
+91,90678955,Bitcoin,
+92,90682345,Bitcoin,
+93,90668576,Bitcoin,
+94,90672025,Bitcoin,
+95,90677340,Bitcoin,
 96,90675515,Bitcoin.com,
-97,90673996,Bitcoins,Bitcoin
-98,90685103,Bitcoins,Bitcoin
+97,90673996,Bitcoins,
+98,90685103,Bitcoins,
 99,90668131,bitpanda,Bitpanda
 100,90670826,Bitpanda,Bitpanda
 101,90664338,Bitpanda,Bitpanda
@@ -113,28 +113,28 @@ _RID,id,text_input,cluster
 111,90669701,Blockchain,
 112,90663091,Bmw,
 113,90668641,BnB,
-114,90684556,börse,Börse
-115,90666741,Börse,Börse
-116,90677549,Börse,Börse
-117,90685901,Börse,Börse
-118,90661621,Börse,Börse
-119,90668613,Börse,Börse
-120,90680984,Börse,Börse
-121,90668734,Börse,Börse
-122,90666018,Börse,Börse
-123,90665080,Börse,Börse
-124,90670467,Börse,Börse
-125,90667177,Börse,Börse
-126,90674018,Börse Frankfurt,Börse Frankfurt
-127,90665499,Börse Frankfurt,Börse Frankfurt
-128,90684999,brokers,
-129,90683039,btcoin,Bitcoin
+114,90684556,börse,
+115,90666741,Börse,
+116,90677549,Börse,
+117,90685901,Börse,
+118,90661621,Börse,
+119,90668613,Börse,
+120,90680984,Börse,
+121,90668734,Börse,
+122,90666018,Börse,
+123,90665080,Börse,
+124,90670467,Börse,
+125,90667177,Börse,
+126,90674018,Börse Frankfurt,
+127,90665499,Börse Frankfurt,
+128,90684999,brokers,S-Broker
+129,90683039,btcoin,
 130,90682073,BWM,
 131,90670026,Bybit,
 132,90680861,Cain,
-133,90670739,capital,Capital.com
-134,90676823,Capital,Capital.com
-135,90666284,Capital.com,Capital.com
+133,90670739,capital,Scalable Capital
+134,90676823,Capital,Scalable Capital
+135,90666284,Capital.com,
 136,90681421,Captrader,
 137,90668979,Change,
 138,90676697,CHech24,
@@ -144,22 +144,22 @@ _RID,id,text_input,cluster
 142,90670387,CMC markets,
 143,90668192,Co,
 144,90671428,Coca cola,
-145,90684339,coinbase,Coinbase
-146,90677267,coinbase,Coinbase
-147,90663493,coinbase,Coinbase
-148,90671641,Coinbase,Coinbase
-149,90664137,Coinbase,Coinbase
-150,90664376,Coinbase,Coinbase
-151,90680408,Coinbase,Coinbase
-152,90662905,Coinbase,Coinbase
-153,90685730,Coinbase,Coinbase
-154,90673791,Coinbase,Coinbase
-155,90676270,Coinbase,Coinbase
-156,90670197,Coinbase,Coinbase
-157,90678392,Coinbase,Coinbase
-158,90674769,Coinbase,Coinbase
-159,90663909,CoinBase,Coinbase
-160,90663779,Coinbase.com,Coinbase
+145,90684339,coinbase,
+146,90677267,coinbase,
+147,90663493,coinbase,
+148,90671641,Coinbase,
+149,90664137,Coinbase,
+150,90664376,Coinbase,
+151,90680408,Coinbase,
+152,90662905,Coinbase,
+153,90685730,Coinbase,
+154,90673791,Coinbase,
+155,90676270,Coinbase,
+156,90670197,Coinbase,
+157,90678392,Coinbase,
+158,90674769,Coinbase,
+159,90663909,CoinBase,
+160,90663779,Coinbase.com,
 161,90670685,comdiirect,Comdirect
 162,90677931,comdirect,Comdirect
 163,90684952,comdirect,Comdirect
@@ -193,14 +193,14 @@ _RID,id,text_input,cluster
 191,90680373,Comdirekt,Comdirect
 192,90665966,Comdirekt,Comdirect
 193,90683100,Comdirext,Comdirect
-194,90685493,comerz,Commerzbank
+194,90685493,comerz,
 195,90681343,cominvest Fondas P,
-196,90682318,Commerzbank,Commerzbank
-197,90675031,Commerzbank,Commerzbank
-198,90682499,Commerzbank,Commerzbank
-199,90670371,Commerzbank,Commerzbank
-200,90670321,Commerzbank,Commerzbank
-201,90672472,Commerzbank,Commerzbank
+196,90682318,Commerzbank,
+197,90675031,Commerzbank,
+198,90682499,Commerzbank,
+199,90670371,Commerzbank,
+200,90670321,Commerzbank,
+201,90672472,Commerzbank,
 202,90681005,consors,Consorsbank
 203,90675156,consors,Consorsbank
 204,90670057,consors,Consorsbank
@@ -228,66 +228,66 @@ _RID,id,text_input,cluster
 226,90665336,cortalconsors,
 227,90663727,Cortal Consors,
 228,90684113,crxt,
-229,90669911,Crypto,crypto
-230,90682596,crypto.com,crypto.com
-231,90675562,Crypto.com,crypto.com
+229,90669911,Crypto,
+230,90682596,crypto.com,
+231,90675562,Crypto.com,
 232,90669245,Dab,
 233,90669930,Dafür muss man sich auskennen,
-234,90673599,Dax,Dax
-235,90665382,Dax,Dax
-236,90668296,Dax,Dax
-237,90663190,Dax,Dax
-238,90662079,Dax,Dax
-239,90678261,Dax,Dax
-240,90671773,Dax,Dax
-241,90665620,Dax,Dax
-242,90666803,DAX,Dax
-243,90680907,DAX,Dax
+234,90673599,Dax,
+235,90665382,Dax,
+236,90668296,Dax,
+237,90663190,Dax,
+238,90662079,Dax,
+239,90678261,Dax,
+240,90671773,Dax,
+241,90665620,Dax,
+242,90666803,DAX,
+243,90680907,DAX,
 244,90672962,DAX dowjones,
 245,90674928,degiro,DeGiro
 246,90674404,Degiro,DeGiro
 247,90679523,Degiro,DeGiro
 248,90665420,Degiro,DeGiro
-249,90676051,deka,Deka
-250,90662534,Deka,Deka
-251,90682989,Deka,Deka
-252,90674702,Deka,Deka
-253,90664537,Deka,Deka
-254,90682407,Deka,Deka
-255,90666903,Deka,Deka
-256,90684925,Deka,Deka
-257,90675871,Deka,Deka
-258,90685065,Deka,Deka
-259,90678910,Deka,Deka
-260,90681554,DEKA,Deka
-261,90668828,Dekafonds,Deka
-262,90678473,Deka Investment,Deka
-263,90669654,Deka Investments,Deka
-264,90663705,deutche bank,Deutsche Bank
-265,90662922,deutsche Bank,Deutsche Bank
-266,90661325,Deutsche bank,Deutsche Bank
-267,90683334,Deutsche Bank,Deutsche Bank
-268,90677513,Deutsche Bank,Deutsche Bank
-269,90675648,Deutsche Bank,Deutsche Bank
-270,90684908,Deutsche Bank,Deutsche Bank
-271,90665297,Deutsche Bank,Deutsche Bank
-272,90670942,Deutsche Bank,Deutsche Bank
-273,90663348,Deutsche Bank,Deutsche Bank
-274,90672119,Deutsche Bank,Deutsche Bank
-275,90675232,Deutsche Bank,Deutsche Bank
-276,90682906,Deutsche Bank,Deutsche Bank
+249,90676051,deka,
+250,90662534,Deka,
+251,90682989,Deka,
+252,90674702,Deka,
+253,90664537,Deka,
+254,90682407,Deka,
+255,90666903,Deka,
+256,90684925,Deka,
+257,90675871,Deka,
+258,90685065,Deka,
+259,90678910,Deka,
+260,90681554,DEKA,
+261,90668828,Dekafonds,
+262,90678473,Deka Investment,
+263,90669654,Deka Investments,
+264,90663705,deutche bank,
+265,90662922,deutsche Bank,
+266,90661325,Deutsche bank,
+267,90683334,Deutsche Bank,
+268,90677513,Deutsche Bank,
+269,90675648,Deutsche Bank,
+270,90684908,Deutsche Bank,
+271,90665297,Deutsche Bank,
+272,90670942,Deutsche Bank,
+273,90663348,Deutsche Bank,
+274,90672119,Deutsche Bank,
+275,90675232,Deutsche Bank,
+276,90682906,Deutsche Bank,
 277,90668692,Deutscher Aktienmarkt,
 278,90675815,DEutsche vermögens Beratung,
-279,90663269,diba,Diba
-280,90680515,Diba,Diba
-281,90674906,Diba,Diba
+279,90663269,diba,
+280,90680515,Diba,
+281,90674906,Diba,
 282,90668110,dkb,DKB
 283,90670666,Dkb,DKB
 284,90667196,DKB,DKB
 285,90671284,DKB,DKB
 286,90683081,DKB,DKB
 287,90673743,DKB,DKB
-288,90676915,DKB Broker,DKB
+288,90676915,DKB Broker,S-Broker
 289,90679063,Dks,
 290,90683404,Dvag,
 291,90679633,dws,
@@ -391,7 +391,7 @@ _RID,id,text_input,cluster
 389,90674619,e torro,eToro
 390,90671692,eTorro,eToro
 391,90670720,Etorro,eToro
-392,90670525,Facebook,Facebook
+392,90670525,Facebook,
 393,90680124,Faltex,Flatex
 394,90668032,Feedback,
 395,90668851,Fex,
@@ -424,48 +424,48 @@ _RID,id,text_input,cluster
 422,90663672,Flatex,Flatex
 423,90684374,Fond,
 424,90682655,FONDMAN,
-425,90671978,Forex,Forex
-426,90679203,Forex,Forex
-427,90665479,Forex,Forex
-428,90669541,Frankfurt,Börse Frankfurt
-429,90676190,Frankfurt Börse,Börse Frankfurt
+425,90671978,Forex,
+426,90679203,Forex,
+427,90665479,Forex,
+428,90669541,Frankfurt,
+429,90676190,Frankfurt Börse,
 430,90680020,Frankfurter Fond Bank,
-431,90685954,ftx,Ftx
-432,90665701,Ftx,Ftx
-433,90663981,Ftx trade,Ftx
+431,90685954,ftx,
+432,90665701,Ftx,
+433,90663981,Ftx trade,
 434,90676069,Games,
 435,90667632,gar keins,
 436,90677831,Gau,
 437,90662575,Geld verlieren,
 438,90670582,German Brokernet,
-439,90661757,Gibt keine,keine
-440,90671674,google,Google
-441,90671231,Google,Google
-442,90665851,Google,Google
-443,90669129,Google,Google
+439,90661757,Gibt keine,
+440,90671674,google,
+441,90671231,Google,
+442,90665851,Google,
+443,90669129,Google,
 444,90674336,Growny,
-445,90663236,gut,gut
-446,90669403,gut,gut
-447,90670343,Gut,gut
-448,90674684,Habe keine Ahnung,Keine Ahnung
-449,90685686,hamburger volksbank,Volksbank
+445,90663236,gut,
+446,90669403,gut,
+447,90670343,Gut,
+448,90674684,Habe keine Ahnung,
+449,90685686,hamburger volksbank,
 450,90673880,Haspa,
-451,90678691,hausbank,Hausbank
-452,90675915,Hausbank,Hausbank
-453,90673389,Hausbank,Hausbank
-454,90675008,Hausbank,Hausbank
+451,90678691,hausbank,
+452,90675915,Hausbank,
+453,90673389,Hausbank,
+454,90675008,Hausbank,
 455,90685020,hgjkjhggjh,
 456,90673371,hier,
 457,90678004,HuK,
 458,90661804,i0,
-459,90684360,ich kenn da keine,keine
-460,90674558,ich kenne keinen,keine
-461,90673249,Ich kenne keinen,keine
-462,90672721,Ich kenne noch keine,keine
+459,90684360,ich kenn da keine,
+460,90674558,ich kenne keinen,
+461,90673249,Ich kenne keinen,
+462,90672721,Ich kenne noch keine,
 463,90672948,Ich kenn mich da nicht aus,
-464,90681145,Ich weis nicht,Weiß nicht
-465,90676682,Ich weiß es nicht genau,Weiß nicht
-466,90666457,ich weiss nicht,Weiß nicht
+464,90681145,Ich weis nicht,
+465,90676682,Ich weiß es nicht genau,
+466,90666457,ich weiss nicht,
 467,90679383,IC markets,
 468,90683427,Idk,
 469,90663218,Igenius,
@@ -507,13 +507,13 @@ _RID,id,text_input,cluster
 505,90663170,ING,ING
 506,90666359,Ingba,ING
 507,90682554,Ing depot,ING
-508,90672558,Ing diba,Ing-Diba
-509,90681121,IngDiba,Ing-Diba
-510,90682820,IngDiba,Ing-Diba
-511,90669718,Ing DiBa,Ing-Diba
-512,90683703,Ing DiBa,Ing-Diba
-513,90680171,ING Diba,Ing-Diba
-514,90681876,ING Diba,Ing-Diba
+508,90672558,Ing diba,ING
+509,90681121,IngDiba,ING
+510,90682820,IngDiba,ING
+511,90669718,Ing DiBa,ING
+512,90683703,Ing DiBa,ING
+513,90680171,ING Diba,ING
+514,90681876,ING Diba,ING
 515,90675446,Instagram,
 516,90663598,Intel,
 517,90682141,Investitionen,
@@ -530,182 +530,182 @@ _RID,id,text_input,cluster
 528,90675116,k.a.,
 529,90678364,Ka,
 530,90661662,Ka,
-531,90671482,Kei e,keine
-532,90685761,keien,keine
-533,90681032,Kein Ahnung,Keine Ahnung
-534,90679943,Kein bestimmtes,keine
-535,90664493,keine,keine
-536,90664479,keine,keine
-537,90678548,keine,keine
-538,90678635,keine,keine
-539,90663950,keine,keine
-540,90675795,keine,keine
-541,90672645,keine,keine
-542,90670419,keine,keine
-543,90667776,keine,keine
-544,90672659,keine,keine
-545,90684291,keine,keine
-546,90682175,keine,keine
-547,90680152,keine,keine
-548,90680105,keine,keine
-549,90685790,keine,keine
-550,90670182,keine,keine
-551,90668899,keine,keine
-552,90670567,keine,keine
-553,90683828,keine,keine
-554,90680701,keine,keine
-555,90666789,keine,keine
-556,90685234,keine,keine
-557,90683282,keine,keine
-558,90676456,keine,keine
-559,90666759,keine,keine
-560,90682463,keine,keine
-561,90675050,keine,keine
-562,90673269,keine,keine
-563,90675401,keine,keine
-564,90676438,keine,keine
-565,90666857,keine,keine
-566,90674389,keine,keine
-567,90681968,keine,keine
-568,90685248,keine,keine
-569,90671414,keine,keine
-570,90681802,keine,keine
-571,90665922,keine,keine
-572,90671532,keine,keine
-573,90684575,keine,keine
-574,90677531,keine,keine
-575,90685279,keine,keine
-576,90671624,keine,keine
-577,90677609,keine,keine
-578,90662031,keine,keine
-579,90683949,keine,keine
-580,90662114,keine,keine
-581,90662128,keine,keine
-582,90662213,keine,keine
-583,90667817,keine,keine
-584,90667163,keine,keine
-585,90675937,keine,keine
-586,90662197,keine,keine
-587,90666615,keine,keine
-588,90664976,keine,keine
-589,90672888,keine,keine
-590,90664957,keine,keine
-591,90669148,keine,keine
-592,90685374,keine,keine
-593,90664789,keine,keine
-594,90661158,keine,keine
-595,90672201,keine,keine
-596,90669603,keine,keine
-597,90666413,keine,keine
-598,90662942,keine,keine
-599,90681078,keine,keine
-600,90682935,Keine,keine
-601,90685153,Keine,keine
-602,90685208,Keine,keine
-603,90682159,Keine,keine
-604,90682053,Keine,keine
-605,90682004,Keine,keine
-606,90661260,Keine,keine
-607,90680240,Keine,keine
-608,90669789,Keine,keine
-609,90679506,Keine,keine
-610,90671040,Keine,keine
-611,90674130,Keine,keine
-612,90671337,Keine,keine
-613,90666191,Keine,keine
-614,90675589,Keine,keine
-615,90666062,Keine,keine
-616,90665939,Keine,keine
-617,90677434,Keine,keine
-618,90662010,Keine,keine
-619,90662251,Keine,keine
-620,90664993,Keine,keine
-621,90662722,Keine,keine
-622,90662736,Keine,keine
-623,90662754,Keine,keine
-624,90672066,Keine,keine
-625,90664579,Keine,keine
-626,90678490,Keine,keine
-627,90672241,Keine,keine
-628,90664362,Keine,keine
-629,90679146,Keine,keine
-630,90679226,Keine,keine
-631,90667913,Keine,keine
-632,90676484,Keine,keine
-633,90676539,Keine,keine
-634,90674544,Keine,keine
-635,90663639,Keine,keine
-636,90663548,Keine,keine
-637,90680715,Keine,keine
-638,90683724,Keine,keine
-639,90683810,Keine,keine
-640,90680923,Keine,keine
-641,90684608,Keine,keine
-642,90670921,keine Ahnung,Keine Ahnung
-643,90677878,keine Ahnung,Keine Ahnung
-644,90679163,keine Ahnung,Keine Ahnung
-645,90667832,keine Ahnung,Keine Ahnung
-646,90674451,keine Ahnung,Keine Ahnung
-647,90666560,Keine ahnung,Keine Ahnung
-648,90667929,Keine ahnung,Keine Ahnung
-649,90668596,Keine Ahnung,Keine Ahnung
-650,90683247,Keine Ahnung,Keine Ahnung
-651,90683262,Keine Ahnung,Keine Ahnung
-652,90661590,Keine Ahnung,Keine Ahnung
-653,90681581,Keine Ahnung,Keine Ahnung
-654,90674305,Keine Ahnung,Keine Ahnung
-655,90670551,Keine Ahnung,Keine Ahnung
-656,90684202,Keine Ahnung,Keine Ahnung
-657,90670505,Keine Ahnung,Keine Ahnung
-658,90663816,Keine Ahnung,Keine Ahnung
-659,90669005,Keine Ahnung,Keine Ahnung
-660,90678415,Keine Ahnung,Keine Ahnung
-661,90664025,Keine Ahnung,Keine Ahnung
-662,90669834,Keine Ahnung,Keine Ahnung
-663,90683384,Keine Angabe,Keine Ahnung
-664,90685353,Keine Angaben,Keine Ahnung
-665,90672847,keinen,keine
-666,90674116,keinen,keine
-667,90679440,keinen,keine
-668,90667803,keinen,keine
-669,90671269,Keinen,keine
-670,90678667,Keiner,keine
-671,90668514,Keiner,keine
-672,90663310,Keines,keine
-673,90661435,"Keine, und das ist gut so",keine
-674,90685139,kenen,keine
-675,90683527,Kenne ich nicht,keine
-676,90684847,kenne keine,keine
-677,90665256,kenne keine,keine
-678,90681324,Kenne keine,keine
-679,90674994,Kenne keine,keine
-680,90673494,Kenne keine,keine
-681,90675831,Kenne keine,keine
-682,90668396,Kenne keine,keine
-683,90667618,Kenne Keine,keine
-684,90679806,kenne keinen,keine
-685,90661349,kenneKeinen,keine
-686,90677457,keone,keine
+531,90671482,Kei e,
+532,90685761,keien,
+533,90681032,Kein Ahnung,
+534,90679943,Kein bestimmtes,
+535,90664493,keine,
+536,90664479,keine,
+537,90678548,keine,
+538,90678635,keine,
+539,90663950,keine,
+540,90675795,keine,
+541,90672645,keine,
+542,90670419,keine,
+543,90667776,keine,
+544,90672659,keine,
+545,90684291,keine,
+546,90682175,keine,
+547,90680152,keine,
+548,90680105,keine,
+549,90685790,keine,
+550,90670182,keine,
+551,90668899,keine,
+552,90670567,keine,
+553,90683828,keine,
+554,90680701,keine,
+555,90666789,keine,
+556,90685234,keine,
+557,90683282,keine,
+558,90676456,keine,
+559,90666759,keine,
+560,90682463,keine,
+561,90675050,keine,
+562,90673269,keine,
+563,90675401,keine,
+564,90676438,keine,
+565,90666857,keine,
+566,90674389,keine,
+567,90681968,keine,
+568,90685248,keine,
+569,90671414,keine,
+570,90681802,keine,
+571,90665922,keine,
+572,90671532,keine,
+573,90684575,keine,
+574,90677531,keine,
+575,90685279,keine,
+576,90671624,keine,
+577,90677609,keine,
+578,90662031,keine,
+579,90683949,keine,
+580,90662114,keine,
+581,90662128,keine,
+582,90662213,keine,
+583,90667817,keine,
+584,90667163,keine,
+585,90675937,keine,
+586,90662197,keine,
+587,90666615,keine,
+588,90664976,keine,
+589,90672888,keine,
+590,90664957,keine,
+591,90669148,keine,
+592,90685374,keine,
+593,90664789,keine,
+594,90661158,keine,
+595,90672201,keine,
+596,90669603,keine,
+597,90666413,keine,
+598,90662942,keine,
+599,90681078,keine,
+600,90682935,Keine,
+601,90685153,Keine,
+602,90685208,Keine,
+603,90682159,Keine,
+604,90682053,Keine,
+605,90682004,Keine,
+606,90661260,Keine,
+607,90680240,Keine,
+608,90669789,Keine,
+609,90679506,Keine,
+610,90671040,Keine,
+611,90674130,Keine,
+612,90671337,Keine,
+613,90666191,Keine,
+614,90675589,Keine,
+615,90666062,Keine,
+616,90665939,Keine,
+617,90677434,Keine,
+618,90662010,Keine,
+619,90662251,Keine,
+620,90664993,Keine,
+621,90662722,Keine,
+622,90662736,Keine,
+623,90662754,Keine,
+624,90672066,Keine,
+625,90664579,Keine,
+626,90678490,Keine,
+627,90672241,Keine,
+628,90664362,Keine,
+629,90679146,Keine,
+630,90679226,Keine,
+631,90667913,Keine,
+632,90676484,Keine,
+633,90676539,Keine,
+634,90674544,Keine,
+635,90663639,Keine,
+636,90663548,Keine,
+637,90680715,Keine,
+638,90683724,Keine,
+639,90683810,Keine,
+640,90680923,Keine,
+641,90684608,Keine,
+642,90670921,keine Ahnung,
+643,90677878,keine Ahnung,
+644,90679163,keine Ahnung,
+645,90667832,keine Ahnung,
+646,90674451,keine Ahnung,
+647,90666560,Keine ahnung,
+648,90667929,Keine ahnung,
+649,90668596,Keine Ahnung,
+650,90683247,Keine Ahnung,
+651,90683262,Keine Ahnung,
+652,90661590,Keine Ahnung,
+653,90681581,Keine Ahnung,
+654,90674305,Keine Ahnung,
+655,90670551,Keine Ahnung,
+656,90684202,Keine Ahnung,
+657,90670505,Keine Ahnung,
+658,90663816,Keine Ahnung,
+659,90669005,Keine Ahnung,
+660,90678415,Keine Ahnung,
+661,90664025,Keine Ahnung,
+662,90669834,Keine Ahnung,
+663,90683384,Keine Angabe,
+664,90685353,Keine Angaben,
+665,90672847,keinen,
+666,90674116,keinen,
+667,90679440,keinen,
+668,90667803,keinen,
+669,90671269,Keinen,
+670,90678667,Keiner,
+671,90668514,Keiner,
+672,90663310,Keines,
+673,90661435,"Keine, und das ist gut so",
+674,90685139,kenen,
+675,90683527,Kenne ich nicht,
+676,90684847,kenne keine,
+677,90665256,kenne keine,
+678,90681324,Kenne keine,
+679,90674994,Kenne keine,
+680,90673494,Kenne keine,
+681,90675831,Kenne keine,
+682,90668396,Kenne keine,
+683,90667618,Kenne Keine,
+684,90679806,kenne keinen,
+685,90661349,kenneKeinen,
+686,90677457,keone,
 687,90666645,kkl,
 688,90681258,Kp,
 689,90671110,kraken,
 690,90676611,Kraken,
-691,90680563,krypto,crypto
-692,90670903,krypto,crypto
-693,90664314,Krypto,crypto
-694,90672983,Krypto,crypto
+691,90680563,krypto,
+692,90670903,krypto,
+693,90664314,Krypto,
+694,90672983,Krypto,
 695,90683471,Lang & Schwarz,
-696,90661192,Libatex,Libertex
-697,90661173,Libertex,Libertex
-698,90673533,Libertex,Libertex
-699,90685411,Libertex,Libertex
-700,90679744,Libertex,Libertex
-701,90681463,Libertex,Libertex
+696,90661192,Libatex,Flatex
+697,90661173,Libertex,
+698,90673533,Libertex,
+699,90685411,Libertex,
+700,90679744,Libertex,
+701,90681463,Libertex,
 702,90666158,Lynx,
 703,90685306,maxblue,
-704,90677017,Meine Bank,Meine Bank
-705,90676109,Meine Bank,Meine Bank
-706,90679920,meine Hausbank,Hausbank
+704,90677017,Meine Bank,
+705,90676109,Meine Bank,
+706,90679920,meine Hausbank,
 707,90668274,Mercedes,
 708,90679183,Meta,
 709,90678071,Metamask,
@@ -716,21 +716,21 @@ _RID,id,text_input,cluster
 714,90685623,n26,
 715,90663934,Nachhaltigkeit,
 716,90666579,Nachhaltigkeit,
-717,90681099,Nasdaq,Nasdaq
-718,90680938,Nein,keine
-719,90665321,Nein,keine
-720,90685700,Neobroker,
+717,90681099,Nasdaq,
+718,90680938,Nein,
+719,90665321,Nein,
+720,90685700,Neobroker,S-Broker
 721,90662228,Netflix,
 722,90665276,nft,
 723,90685984,nft web,
 724,90677040,nhjjn,
 725,90665831,Nicht bekannt,
-726,90662479,nichts,Weiß nicht
-727,90677372,Nichts,Weiß nicht
+726,90662479,nichts,
+727,90677372,Nichts,
 728,90680827,Nix,
 729,90679893,Nordstern,
 730,90685557,ntv,
-731,90676861,Offertoro,
+731,90676861,Offertoro,eToro
 732,90675995,ok,
 733,90663328,onvista,Onvista
 734,90684480,onvista,Onvista
@@ -738,23 +738,23 @@ _RID,id,text_input,cluster
 736,90682618,Onvista,Onvista
 737,90661527,Onvista,Onvista
 738,90661986,OnVista,Onvista
-739,90674667,otore,
-740,90684695,plus500,Plus500
-741,90669025,plus500,Plus500
-742,90669681,plus500,Plus500
-743,90668367,Plus500,Plus500
-744,90674431,Plus500,Plus500
-745,90662268,Plus500,Plus500
-746,90685335,Plus500,Plus500
-747,90669276,Plus500,Plus500
-748,90683178,Plus500,Plus500
-749,90663515,Plus500,Plus500
-750,90667398,Plus 500,Plus500
-751,90673428,Plus 500,Plus500
-752,90683743,Post,Postbank
-753,90668243,Postbank,Postbank
-754,90670603,Postbank,Postbank
-755,90665678,Postbank,Postbank
+739,90674667,otore,eToro
+740,90684695,plus500,
+741,90669025,plus500,
+742,90669681,plus500,
+743,90668367,Plus500,
+744,90674431,Plus500,
+745,90662268,Plus500,
+746,90685335,Plus500,
+747,90669276,Plus500,
+748,90683178,Plus500,
+749,90663515,Plus500,
+750,90667398,Plus 500,
+751,90673428,Plus 500,
+752,90683743,Post,
+753,90668243,Postbank,
+754,90670603,Postbank,
+755,90665678,Postbank,
 756,90672601,ProRealTime Trading,
 757,90679864,Quirion,
 758,90677646,rdt fwedt gwetzgw,
@@ -816,46 +816,46 @@ _RID,id,text_input,cluster
 814,90669077,Smartbroker,Smartbroker
 815,90668561,Smartphone,
 816,90684058,sparda bank,
-817,90678320,sparkasse,Sparkasse
-818,90677910,sparkasse,Sparkasse
-819,90684829,sparkasse,Sparkasse
-820,90681984,sparkasse,Sparkasse
-821,90674213,sparkasse,Sparkasse
-822,90683142,sparkasse,Sparkasse
-823,90685085,sparkasse,Sparkasse
-824,90663289,sparkasse,Sparkasse
-825,90684977,Sparkasse,Sparkasse
-826,90666262,Sparkasse,Sparkasse
-827,90677760,Sparkasse,Sparkasse
-828,90678525,Sparkasse,Sparkasse
-829,90672048,Sparkasse,Sparkasse
-830,90665209,Sparkasse,Sparkasse
-831,90681536,Sparkasse,Sparkasse
-832,90680621,Sparkasse,Sparkasse
-833,90685921,Sparkasse,Sparkasse
-834,90662283,Sparkasse,Sparkasse
-835,90680495,Sparkasse,Sparkasse
-836,90674528,Sparkasse,Sparkasse
-837,90668945,Sparkasse,Sparkasse
-838,90677190,Sparkasse,Sparkasse
-839,90669989,Sparkasse,Sparkasse
-840,90676663,Sparkasse,Sparkasse
-841,90672906,Sparkasse,Sparkasse
-842,90676591,Sparkasse,Sparkasse
-843,90665754,sparkassen broker,Sparkasse
-844,90676788,Sparkassen Broker,Sparkasse
-845,90677594,sparkassenfonds,Sparkasse
+817,90678320,sparkasse,
+818,90677910,sparkasse,
+819,90684829,sparkasse,
+820,90681984,sparkasse,
+821,90674213,sparkasse,
+822,90683142,sparkasse,
+823,90685085,sparkasse,
+824,90663289,sparkasse,
+825,90684977,Sparkasse,
+826,90666262,Sparkasse,
+827,90677760,Sparkasse,
+828,90678525,Sparkasse,
+829,90672048,Sparkasse,
+830,90665209,Sparkasse,
+831,90681536,Sparkasse,
+832,90680621,Sparkasse,
+833,90685921,Sparkasse,
+834,90662283,Sparkasse,
+835,90680495,Sparkasse,
+836,90674528,Sparkasse,
+837,90668945,Sparkasse,
+838,90677190,Sparkasse,
+839,90669989,Sparkasse,
+840,90676663,Sparkasse,
+841,90672906,Sparkasse,
+842,90676591,Sparkasse,
+843,90665754,sparkassen broker,
+844,90676788,Sparkassen Broker,
+845,90677594,sparkassenfonds,
 846,90683159,Sport,
 847,90666598,Ssk,
 848,90669746,sskbroker,S-Broker
-849,90683365,stoker,
+849,90683365,stoker,S-Broker
 850,90676207,Storm,
 851,90680842,Stuttgarter,
 852,90684187,Super,
 853,90685389,Sweatcoin,
 854,90670768,Swissborg,
-855,90674228,targobank,Targobank
-856,90663142,Targobank,Targobank
+855,90674228,targobank,
+856,90663142,Targobank,
 857,90684221,Taxfix,
 858,90662428,Templeton,
 859,90681907,Tesla,
@@ -942,13 +942,13 @@ _RID,id,text_input,cluster
 940,90674968,Traiding.com,
 941,90684423,Uggig,
 942,90682855,Unbekannt,
-943,90682677,Union invest,Union Investment
-944,90667464,Union Invest,Union Investment
-945,90664611,unioninvestment,Union Investment
-946,90669556,Union Investment,Union Investment
-947,90673725,Union Investment,Union Investment
-948,90680960,Union Investment,Union Investment
-949,90671090,Union Investment,Union Investment
+943,90682677,Union invest,
+944,90667464,Union Invest,
+945,90664611,unioninvestment,
+946,90669556,Union Investment,
+947,90673725,Union Investment,
+948,90680960,Union Investment,
+949,90671090,Union Investment,
 950,90665641,Uphold,
 951,90674816,Vanguard,
 952,90671377,Vergessen,
@@ -957,47 +957,47 @@ _RID,id,text_input,cluster
 955,90685475,vista,Onvista
 956,90667668,Vivid,Vivid Money
 957,90675623,Vivid,Vivid Money
-958,90685262,volksbank,Volksbank
-959,90672927,volksbank,Volksbank
-960,90669465,Volksbank,Volksbank
-961,90668711,Volksbank,Volksbank
-962,90667310,Volksbank,Volksbank
-963,90672262,Volksbank,Volksbank
-964,90678297,Vorex,Forex
+958,90685262,volksbank,
+959,90672927,volksbank,
+960,90669465,Volksbank,
+961,90668711,Volksbank,
+962,90667310,Volksbank,
+963,90672262,Volksbank,
+964,90678297,Vorex,
 965,90681393,VR-Bank,
 966,90678180,VR Banken,
 967,90666973,VR-Banken,
 968,90672627,Vw,
 969,90664813,Wallstreet,
-970,90683060,Watex,
-971,90664507,weis nicht,Weiß nicht
-972,90683121,weis nicht,Weiß nicht
-973,90663895,weis nicht,Weiß nicht
-974,90670651,weis nicht,Weiß nicht
-975,90678343,weiß ich nicht,Weiß nicht
-976,90674249,Weiß ich nicht,Weiß nicht
-977,90669188,Weiß ich nicht,Weiß nicht
-978,90671465,Weiß ich nicht,Weiß nicht
-979,90661140,Weiß ich nicht,Weiß nicht
-980,90677420,weiss nicht,Weiß nicht
-981,90684458,weiß nicht,Weiß nicht
-982,90669848,weiß nicht,Weiß nicht
-983,90666871,weiß nicht,Weiß nicht
-984,90673230,weiß nicht,Weiß nicht
-985,90667335,weiß nicht,Weiß nicht
-986,90679962,weiß nicht,Weiß nicht
-987,90684444,weiß nicht,Weiß nicht
-988,90676299,Weiß nicht,Weiß nicht
-989,90673669,Weiß nicht,Weiß nicht
-990,90671021,Weiß nicht,Weiß nicht
-991,90680880,Weiß nicht,Weiß nicht
-992,90674075,Weiß nicht,Weiß nicht
-993,90673081,Weiß nicht,Weiß nicht
-994,90666123,Weiß nicht,Weiß nicht
-995,90680479,Weiß nicht.,Weiß nicht
+970,90683060,Watex,Flatex
+971,90664507,weis nicht,
+972,90683121,weis nicht,
+973,90663895,weis nicht,
+974,90670651,weis nicht,
+975,90678343,weiß ich nicht,
+976,90674249,Weiß ich nicht,
+977,90669188,Weiß ich nicht,
+978,90671465,Weiß ich nicht,
+979,90661140,Weiß ich nicht,
+980,90677420,weiss nicht,
+981,90684458,weiß nicht,
+982,90669848,weiß nicht,
+983,90666871,weiß nicht,
+984,90673230,weiß nicht,
+985,90667335,weiß nicht,
+986,90679962,weiß nicht,
+987,90684444,weiß nicht,
+988,90676299,Weiß nicht,
+989,90673669,Weiß nicht,
+990,90671021,Weiß nicht,
+991,90680880,Weiß nicht,
+992,90674075,Weiß nicht,
+993,90673081,Weiß nicht,
+994,90666123,Weiß nicht,
+995,90680479,Weiß nicht.,
 996,90665808,weltsparen,
 997,90681788,Wirexx,
-998,90678940,wiss nicht,Weiß nicht
+998,90678940,wiss nicht,
 999,90671571,World trade Republik,Trade Republic
 1000,90675972,X,
 1001,90675066,xetra,
@@ -1005,8 +1005,8 @@ _RID,id,text_input,cluster
 1003,90680196,xtb,
 1004,90669770,xtb,
 1005,90665182,Xxx,
-1006,90667889,Zero,Zero
-1007,90684258,Zero,Zero
+1006,90667889,Zero,Finanzen.net Zero
+1007,90684258,Zero,Finanzen.net Zero
 1008,90678021,,
 1009,90684892,!!!!!!!!,
 1010,90678719,/,
@@ -1014,36 +1014,36 @@ _RID,id,text_input,cluster
 1012,90667278,324,
 1013,90666646,3gh,
 1014,90682024,5,
-1015,90661193,500,Plus500
-1016,90680351,500 plus,Plus500
+1015,90661193,500,
+1016,90680351,500 plus,
 1017,90684002,6,
 1018,90679456,8,
 1019,90677228,89ll,
 1020,90672722,Ab und an welche gehört,
-1021,90684738,Adidas,Adidas
+1021,90684738,Adidas,
 1022,90674969,akktn,
 1023,90681364,Aktien,
-1024,90663599,Amazon,Amazon
-1025,90682346,Amazon,Amazon
-1026,90662592,App,App
-1027,90676168,Apple,Apple
-1028,90661506,Apps,App
+1024,90663599,Amazon,
+1025,90682346,Amazon,
+1026,90662592,App,
+1027,90676168,Apple,
+1028,90661506,Apps,
 1029,90681394,Aux money,
-1030,90678668,Bank,bank
-1031,90669051,banken,bank
-1032,90662398,binance,Binance
-1033,90664915,binance,Binance
-1034,90665642,Binance,Binance
-1035,90675563,Binance,Binance
-1036,90676271,Binance,Binance
-1037,90664736,Binance,Binance
-1038,90683501,Binance,Binance
-1039,90670388,Binance,Binance
-1040,90668915,Bingx,
-1041,90674405,Bison,Bison
-1042,90661622,Bitcoin,Bitcoin
-1043,90676698,Bitcoin,Bitcoin
-1044,90685538,Bitcoin,Bitcoin
+1030,90678668,Bank,
+1031,90669051,banken,
+1032,90662398,binance,
+1033,90664915,binance,
+1034,90665642,Binance,
+1035,90675563,Binance,
+1036,90676271,Binance,
+1037,90664736,Binance,
+1038,90683501,Binance,
+1039,90670388,Binance,
+1040,90668915,Bingx,ING
+1041,90674405,Bison,
+1042,90661622,Bitcoin,
+1043,90676698,Bitcoin,
+1044,90685538,Bitcoin,
 1045,90680048,Bitget,
 1046,90677341,Bitmark,
 1047,90680457,Bitpanda,Bitpanda
@@ -1053,22 +1053,22 @@ _RID,id,text_input,cluster
 1051,90671953,Bitpanda,Bitpanda
 1052,90668275,Bmw,
 1053,90680862,Boh,
-1054,90685494,boker,
-1055,90663795,Börse,Börse
+1054,90685494,boker,S-Broker
+1055,90663795,Börse,
 1056,90676110,Bux,BUX
 1057,90663409,Bux,BUX
-1058,90671306,Capital.com,Capital.com
-1059,90663516,Capital.com,Capital.com
-1060,90676384,Capital.com,Capital.com
-1061,90685955,coinbase,Coinbase
-1062,90670827,Coinbase,Coinbase
-1063,90665702,Coinbase,Coinbase
-1064,90680307,Coinbase,Coinbase
-1065,90668642,Coinbase,Coinbase
-1066,90668980,Coinbase,Coinbase
-1067,90676338,Coinbase,Coinbase
-1068,90666992,Coinbase,Coinbase
-1069,90683547,Coin base,Coinbase
+1058,90671306,Capital.com,
+1059,90663516,Capital.com,
+1060,90676384,Capital.com,
+1061,90685955,coinbase,
+1062,90670827,Coinbase,
+1063,90665702,Coinbase,
+1064,90680307,Coinbase,
+1065,90668642,Coinbase,
+1066,90668980,Coinbase,
+1067,90676338,Coinbase,
+1068,90666992,Coinbase,
+1069,90683547,Coin base,
 1070,90674929,comdirect,Comdirect
 1071,90679247,comdirect,Comdirect
 1072,90686093,comdirect,Comdirect
@@ -1089,15 +1089,15 @@ _RID,id,text_input,cluster
 1087,90673810,Comdirekt,Comdirect
 1088,90677086,Comdirekt,Comdirect
 1089,90667945,Comdirekt,Comdirect
-1090,90665809,commerzbank,Commerzbank
-1091,90661326,Commerzbank,Commerzbank
-1092,90662660,Commerzbank,Commerzbank
-1093,90676612,Commerzbank,Commerzbank
-1094,90677667,Commerzbank,Commerzbank
-1095,90670943,Commerzbank,Commerzbank
-1096,90666707,Commerzbank,Commerzbank
-1097,90680772,Commerzbank,Commerzbank
-1098,90674620,Commerzbank,Commerzbank
+1090,90665809,commerzbank,
+1091,90661326,Commerzbank,
+1092,90662660,Commerzbank,
+1093,90676612,Commerzbank,
+1094,90677667,Commerzbank,
+1095,90670943,Commerzbank,
+1096,90666707,Commerzbank,
+1097,90680772,Commerzbank,
+1098,90674620,Commerzbank,
 1099,90676015,Consor,Consorsbank
 1100,90680172,consors,Consorsbank
 1101,90685169,Consors,Consorsbank
@@ -1111,40 +1111,40 @@ _RID,id,text_input,cluster
 1109,90682247,Consorsbank,Consorsbank
 1110,90675896,consorsbank broker,Consorsbank
 1111,90682907,Contal Consors,
-1112,90668297,Crypto,crypto
-1113,90678298,Crypto,crypto
-1114,90683011,crypto.com,crypto.com
-1115,90678956,Dax,Dax
-1116,90665123,Deka,Deka
-1117,90682678,Deka,Deka
-1118,90680744,DEKA,Deka
-1119,90666580,Deka Immobilien,Deka
-1120,90667465,Deka Invest,Deka
+1112,90668297,Crypto,
+1113,90678298,Crypto,
+1114,90683011,crypto.com,
+1115,90678956,Dax,
+1116,90665123,Deka,
+1117,90682678,Deka,
+1118,90680744,DEKA,
+1119,90666580,Deka Immobilien,
+1120,90667465,Deka Invest,
 1121,90677832,Dents,
 1122,90676789,Deuba,
-1123,90682879,deutschebank,Deutsche Bank
-1124,90675067,deutsche bank,Deutsche Bank
-1125,90683143,deutsche bank,Deutsche Bank
-1126,90681877,Deutsche Bank,Deutsche Bank
-1127,90671091,Deutsche Bank,Deutsche Bank
-1128,90675032,Deutsche Bank,Deutsche Bank
+1123,90682879,deutschebank,
+1124,90675067,deutsche bank,
+1125,90683143,deutsche bank,
+1126,90681877,Deutsche Bank,
+1127,90671091,Deutsche Bank,
+1128,90675032,Deutsche Bank,
 1129,90685558,deutsche börse,
-1130,90670604,diba,Diba
-1131,90672049,Diba,Diba
-1132,90683764,Diba,Diba
-1133,90669246,Diba,Diba
-1134,90664814,Die börse,Börse
+1130,90670604,diba,
+1131,90672049,Diba,
+1132,90683764,Diba,
+1133,90669246,Diba,
+1134,90664814,Die börse,
 1135,90684926,Dkb,DKB
 1136,90662429,DKB,DKB
 1137,90671749,DKB,DKB
 1138,90681692,DKB,DKB
 1139,90671000,DKB,DKB
 1140,90682523,DKB,DKB
-1141,90672026,Dodgecoin,Dogecoin
-1142,90667261,Dogcoin,Dogecoin
-1143,90677960,Dogecoin,Dogecoin
-1144,90672801,Dogecoin,Dogecoin
-1145,90685104,DogeCoins,Dogecoin
+1141,90672026,Dodgecoin,
+1142,90667261,Dogcoin,
+1143,90677960,Dogecoin,
+1144,90672801,Dogecoin,
+1145,90685104,DogeCoins,
 1146,90678911,Dwpbank,
 1147,90684144,Ebony,
 1148,90680622,Eltoro,eToro
@@ -1171,8 +1171,8 @@ _RID,id,text_input,cluster
 1169,90686053,EToro,eToro
 1170,90671642,ETorro,eToro
 1171,90664315,Euro,
-1172,90662229,Facebook,Facebook
-1173,90669130,Facebook,Facebook
+1172,90662229,Facebook,
+1173,90669130,Facebook,
 1174,90664046,Finanzen net,Finanzen.net Zero
 1175,90663750,Finanzen.net Zero,Finanzen.net Zero
 1176,90681294,flatex,Flatex
@@ -1196,7 +1196,7 @@ _RID,id,text_input,cluster
 1194,90663834,Ghj,
 1195,90673324,goldmann und sachs,
 1196,90668193,Guten Morgen Frau,
-1197,90671843,guutee,gut
+1197,90671843,guutee,
 1198,90682656,HERALD,
 1199,90669209,Hkkgjk,
 1200,90673838,Hypovereinsbank,
@@ -1222,20 +1222,20 @@ _RID,id,text_input,cluster
 1220,90662554,ING,ING
 1221,90670322,ING,ING
 1222,90677018,Ing depot,ING
-1223,90678608,IngDiba,Ing-Diba
-1224,90673689,Ing Diba,Ing-Diba
+1223,90678608,IngDiba,ING
+1224,90673689,Ing Diba,ING
 1225,90668735,Inter,
 1226,90672120,Invest500,
 1227,90680000,investiere gerne in zuknftsweisende aktien,
 1228,90674185,JA,
 1229,90677703,Just trade,Justtrade
-1230,90673211,keine,keine
-1231,90662198,keine,keine
-1232,90682054,Keine,keine
+1230,90673211,keine,
+1231,90662198,keine,
+1232,90682054,Keine,
 1233,90685021,"k,jmjfhhgbn",
-1234,90664275,libertex,Libertex
-1235,90683924,Libertex,Libertex
-1236,90671930,Libertex,Libertex
+1234,90664275,libertex,
+1235,90683924,Libertex,
+1236,90671930,Libertex,
 1237,90674817,Lyxor,
 1238,90673296,medionlanun,
 1239,90665421,Mexem,
@@ -1252,24 +1252,24 @@ _RID,id,text_input,cluster
 1250,90683674,onVista,Onvista
 1251,90666087,Onvista,Onvista
 1252,90664422,OnVista,Onvista
-1253,90663114,Oskar,Oscar
+1253,90663114,Oskar,
 1254,90684259,Otoro,eToro
 1255,90676070,Parfum,
 1256,90666238,Peaks,
-1257,90671429,Pepsi,Pepsi
-1258,90681908,Pepsi,Pepsi
+1257,90671429,Pepsi,
+1258,90681908,Pepsi,
 1259,90681555,PIONEER,
-1260,90667723,plus500,Plus500
-1261,90669078,Plus500,Plus500
-1262,90667372,Plus500,Plus500
-1263,90663859,Plus500,Plus500
-1264,90682703,Plus500,Plus500
-1265,90685412,Plus 500,Plus500
-1266,90678321,postbank,Postbank
-1267,90675649,Postbank,Postbank
-1268,90666904,Postbank,Postbank
+1260,90667723,plus500,
+1261,90669078,Plus500,
+1262,90667372,Plus500,
+1263,90663859,Plus500,
+1264,90682703,Plus500,
+1265,90685412,Plus 500,
+1266,90678321,postbank,
+1267,90675649,Postbank,
+1268,90666904,Postbank,
 1269,90663706,pot,
-1270,90678181,Puls500,Plus500
+1270,90678181,Puls500,
 1271,90667890,Raiffeisenbank,
 1272,90677388,Robinhood,Robinhood
 1273,90673581,Robinhood,Robinhood
@@ -1309,23 +1309,23 @@ _RID,id,text_input,cluster
 1307,90678093,Smartbroker,Smartbroker
 1308,90665030,Smartbroker,Smartbroker
 1309,90663349,Smart broker,Smartbroker
-1310,90674163,sparkasse,Sparkasse
-1311,90674907,Sparkasse,Sparkasse
-1312,90664657,Sparkasse,Sparkasse
-1313,90680579,Sparkasse,Sparkasse
-1314,90675346,Sparkasse,Sparkasse
-1315,90674019,Sparkasse,Sparkasse
-1316,90682293,Sparkasse,Sparkasse
-1317,90682408,Sparkasse,Sparkasse
-1318,90675475,Sparkasse,Sparkasse
-1319,90670251,Sparkasse,Sparkasse
-1320,90676507,Sparkasse,Sparkasse
-1321,90676560,Sparkassen Broker,Sparkasse
+1310,90674163,sparkasse,
+1311,90674907,Sparkasse,
+1312,90664657,Sparkasse,
+1313,90680579,Sparkasse,
+1314,90675346,Sparkasse,
+1315,90674019,Sparkasse,
+1316,90682293,Sparkasse,
+1317,90682408,Sparkasse,
+1318,90675475,Sparkasse,
+1319,90670251,Sparkasse,
+1320,90676507,Sparkasse,
+1321,90676560,Sparkassen Broker,
 1322,90665480,Stormgain,
 1323,90675319,supercoin,
-1324,90665210,Tagobank,Targobank
-1325,90671715,Targobank,Targobank
-1326,90685922,Targobank,Targobank
+1324,90665210,Tagobank,
+1325,90671715,Targobank,
+1326,90685922,Targobank,
 1327,90674366,Tesla,
 1328,90680648,Tesla,
 1329,90683612,Toro,eToro
@@ -1370,15 +1370,15 @@ _RID,id,text_input,cluster
 1368,90668033,Twiter,
 1369,90671602,tztui,
 1370,90684424,Ufigbo,
-1371,90684312,U invest,Union Investment
+1371,90684312,U invest,
 1372,90662535,Unifonds,
-1373,90664538,Union Invest,Union Investment
+1373,90664538,Union Invest,
 1374,90665500,Versicherung,
 1375,90683335,Vivid money,Vivid Money
-1376,90674096,Volksbank,Volksbank
+1376,90674096,Volksbank,
 1377,90663092,Vw,
-1378,90683528,Weiß nicht,Weiß nicht
-1379,90666124,Weiß nucht,Weiß nicht
+1378,90683528,Weiß nicht,
+1379,90666124,Weiß nucht,
 1380,90661229,welche,
 1381,90668577,Wirecard,
 1382,90677647,wrezgwe rzggwe4rzg,
@@ -1388,7 +1388,7 @@ _RID,id,text_input,cluster
 1386,90679606,Xtracker,
 1387,90673429,Xtrend,
 1388,90665183,Yyy,
-1389,90677291,Zero,Zero
+1389,90677291,Zero,Finanzen.net Zero
 1390,90675299,Zuma,
 1391,90678720,/,
 1392,90684893,######$,
@@ -1396,37 +1396,37 @@ _RID,id,text_input,cluster
 1394,90673811,1822 Direkt,
 1395,90667279,324,
 1396,90679457,5,
-1397,90678299,500,Plus500
+1397,90678299,500,
 1398,90684003,78,
-1399,90675300,Adidas,Adidas
+1399,90675300,Adidas,
 1400,90683144,allianz,
 1401,90668578,Allianz,
 1402,90664539,Allianz,
 1403,90667466,Allianz Global,
 1404,90665422,Alpaca,
-1405,90674367,Amazon,Amazon
-1406,90669131,Amazon,Amazon
-1407,90664316,Amazon,Amazon
+1405,90674367,Amazon,
+1406,90669131,Amazon,
+1407,90664316,Amazon,
 1408,90673297,andbank,
-1409,90678669,App,App
-1410,90662593,App,App
-1411,90668736,Bank,bank
-1412,90685956,binance,Binance
-1413,90678394,Binance,Binance
-1414,90669052,bison,Bison
-1415,90664423,Bison,Bison
-1416,90667219,Bitcoin,Bitcoin
+1409,90678669,App,
+1410,90662593,App,
+1411,90668736,Bank,
+1412,90685956,binance,
+1413,90678394,Binance,
+1414,90669052,bison,
+1415,90664423,Bison,
+1416,90667219,Bitcoin,
 1417,90671844,blattform,
 1418,90668133,blockchain,
 1419,90663115,Blockchain,
 1420,90684087,Blu,
-1421,90685923,Börse,Börse
+1421,90685923,Börse,
 1422,90681365,Börse24,
 1423,90680863,Charl,
 1424,90677833,Chrome,
-1425,90684697,coinbase,Coinbase
-1426,90680049,Coinbase,Coinbase
-1427,90671499,Coinbase,Coinbase
+1425,90684697,coinbase,
+1426,90680049,Coinbase,
+1427,90671499,Coinbase,
 1428,90677786,comdirect,Comdirect
 1429,90676984,comdirect,Comdirect
 1430,90673921,comdirect,Comdirect
@@ -1438,24 +1438,24 @@ _RID,id,text_input,cluster
 1436,90681196,Comdirect,Comdirect
 1437,90684517,COMDIRECT,Comdirect
 1438,90668947,COM direkt,Comdirect
-1439,90665756,commerzbank,Commerzbank
-1440,90682880,commerzbank,Commerzbank
-1441,90663674,Commerzbank,Commerzbank
-1442,90664658,Commerzbank,Commerzbank
+1439,90665756,commerzbank,
+1440,90682880,commerzbank,
+1441,90663674,Commerzbank,
+1442,90664658,Commerzbank,
 1443,90677933,consers,
 1444,90682524,Consors,Consorsbank
 1445,90669247,Consors,Consorsbank
-1446,90669703,Crypto,crypto
-1447,90680458,Crypto,crypto
-1448,90680308,Crypto. Com,crypto.com
-1449,90678322,deutsche bank,Deutsche Bank
-1450,90679635,deutsche bank,Deutsche Bank
-1451,90681395,Deutsche Bank,Deutsche Bank
-1452,90682294,Deutsche Bank,Deutsche Bank
-1453,90685582,Deutsche Bank,Deutsche Bank
-1454,90676234,Deutsche Bank,Deutsche Bank
+1446,90669703,Crypto,
+1447,90680458,Crypto,
+1448,90680308,Crypto. Com,
+1449,90678322,deutsche bank,
+1450,90679635,deutsche bank,
+1451,90681395,Deutsche Bank,
+1452,90682294,Deutsche Bank,
+1453,90685582,Deutsche Bank,
+1454,90676234,Deutsche Bank,
 1455,90676613,Devk,
-1456,90663517,Direktbank ING,
+1456,90663517,Direktbank ING,ING
 1457,90683012,diverse andere,
 1458,90681878,Dividenden Kalender,
 1459,90664613,dkb,DKB
@@ -1467,7 +1467,7 @@ _RID,id,text_input,cluster
 1465,90685170,DKB,DKB
 1466,90673325,dk bank,DKB
 1467,90663707,dm,
-1468,90677171,Dogecoin,Dogecoin
+1468,90677171,Dogecoin,
 1469,90682679,DWS,
 1470,90680649,Dxz,
 1471,90663600,Ebay,
@@ -1493,8 +1493,8 @@ _RID,id,text_input,cluster
 1491,90681602,Flatex,Flatex
 1492,90670230,FlatEx,Flatex
 1493,90679525,Fledex,
-1494,90669806,ftx,Ftx
-1495,90666708,Hausbanken,Hausbank
+1494,90669806,ftx,
+1495,90666708,Hausbanken,
 1496,90663835,hjhjk,
 1497,90668194,https://pns.onelink.me/6tpA?pid=User_invite&info=1122571107_1005920000058814,
 1498,90676743,Huwai,
@@ -1504,15 +1504,15 @@ _RID,id,text_input,cluster
 1502,90668417,ING,ING
 1503,90676561,ING,ING
 1504,90666036,Ing.de,ING
-1505,90671180,Ing diba,Ing-Diba
+1505,90671180,Ing diba,ING
 1506,90681909,Instagram,
 1507,90662230,Instagram,
 1508,90667724,iqoption,
 1509,90674186,JA,
 1510,90661378,Just trade,Justtrade
 1511,90676016,Just trade,Justtrade
-1512,90662199,keine,keine
-1513,90682055,Keine,keine
+1512,90662199,keine,
+1513,90682055,Keine,
 1514,90676339,Kraken,
 1515,90668981,Kukoin,
 1516,90677961,Luna2,
@@ -1520,22 +1520,22 @@ _RID,id,text_input,cluster
 1518,90663350,N26,
 1519,90667670,N26,
 1520,90670944,N26,
-1521,90665384,Nasdaq,Nasdaq
+1521,90665384,Nasdaq,
 1522,90671430,Nestle,
 1523,90673582,Nextmarkets,Nextmarkets
 1524,90680410,Nfteywa,
 1525,90670605,norisbank,Consorsbank
 1526,90662846,Okx,
-1527,90674723,Oscar,Oscar
-1528,90662689,Oscar,Oscar
-1529,90680799,plus500,Plus500
-1530,90673122,plus 500,Plus500
-1531,90675320,plus 500,Plus500
-1532,90675370,Plus500,Plus500
-1533,90666286,Plus500,Plus500
-1534,90669165,Plus500,Plus500
-1535,90667946,Postbank,Postbank
-1536,90682744,Postbank Broker,Postbank
+1527,90674723,Oscar,
+1528,90662689,Oscar,
+1529,90680799,plus500,
+1530,90673122,plus 500,
+1531,90675320,plus 500,
+1532,90675370,Plus500,
+1533,90666286,Plus500,
+1534,90669165,Plus500,
+1535,90667946,Postbank,
+1536,90682744,Postbank Broker,
 1537,90683336,Robinhhod,Robinhood
 1538,90675068,sbroker,S-Broker
 1539,90681819,scable capital,Scalable Capital
@@ -1565,11 +1565,11 @@ _RID,id,text_input,cluster
 1563,90679479,Smartbroker,Smartbroker
 1564,90680126,Smartbroker,Smartbroker
 1565,90684145,Sony,
-1566,90679248,sparkasse,Sparkasse
-1567,90665124,Sparkasse,Sparkasse
-1568,90661327,Sparkasse,Sparkasse
-1569,90683548,Sparkasse,Sparkasse
-1570,90667748,Sparkasse,Sparkasse
+1566,90679248,sparkasse,
+1567,90665124,Sparkasse,
+1568,90661327,Sparkasse,
+1569,90683548,Sparkasse,
+1570,90667748,Sparkasse,
 1571,90667373,Swissquote,
 1572,90663093,Telekom,
 1573,90682347,Tesla,
@@ -1585,15 +1585,15 @@ _RID,id,text_input,cluster
 1583,90662810,Trading212,Trading 212
 1584,90663410,Trading 212,Trading 212
 1585,90666088,Träfe republic,Trade Republic
-1586,90674930,union investment,Union Investment
-1587,90685807,Union Investment,Union Investment
+1586,90674930,union investment,
+1587,90685807,Union Investment,
 1588,90671603,uzio,
 1589,90675476,Vivid,Vivid Money
 1590,90676863,VmWare,
-1591,90679279,Volksbank,Volksbank
-1592,90666125,Weiß nicht,Weiß nicht
+1591,90679279,Volksbank,
+1592,90666125,Weiß nicht,
 1593,90682704,xtb,
-1594,90676142,zero,Zero
+1594,90676142,zero,Finanzen.net Zero
 1595,90684425,Zfugiv,
 1596,90665184,Zzz,
 1597,90682025,,
