@@ -127,13 +127,13 @@ _RID,id,text_input,cluster
 125,90667177,Börse,Börse
 126,90674018,Börse Frankfurt,Börse Frankfurt
 127,90665499,Börse Frankfurt,Börse Frankfurt
-128,90684999,brokers,S-Broker
+128,90684999,brokers,
 129,90683039,btcoin,Bitcoin
 130,90682073,BWM,
 131,90670026,Bybit,
 132,90680861,Cain,
-133,90670739,capital,Scalable Capital
-134,90676823,Capital,Scalable Capital
+133,90670739,capital,Capital.com
+134,90676823,Capital,Capital.com
 135,90666284,Capital.com,Capital.com
 136,90681421,Captrader,
 137,90668979,Change,
@@ -287,7 +287,7 @@ _RID,id,text_input,cluster
 285,90671284,DKB,DKB
 286,90683081,DKB,DKB
 287,90673743,DKB,DKB
-288,90676915,DKB Broker,S-Broker
+288,90676915,DKB Broker,DKB
 289,90679063,Dks,
 290,90683404,Dvag,
 291,90679633,dws,
@@ -507,13 +507,13 @@ _RID,id,text_input,cluster
 505,90663170,ING,ING
 506,90666359,Ingba,ING
 507,90682554,Ing depot,ING
-508,90672558,Ing diba,ING
-509,90681121,IngDiba,ING
-510,90682820,IngDiba,ING
-511,90669718,Ing DiBa,ING
-512,90683703,Ing DiBa,ING
-513,90680171,ING Diba,ING
-514,90681876,ING Diba,ING
+508,90672558,Ing diba,Ing-Diba
+509,90681121,IngDiba,Ing-Diba
+510,90682820,IngDiba,Ing-Diba
+511,90669718,Ing DiBa,Ing-Diba
+512,90683703,Ing DiBa,Ing-Diba
+513,90680171,ING Diba,Ing-Diba
+514,90681876,ING Diba,Ing-Diba
 515,90675446,Instagram,
 516,90663598,Intel,
 517,90682141,Investitionen,
@@ -695,7 +695,7 @@ _RID,id,text_input,cluster
 693,90664314,Krypto,crypto
 694,90672983,Krypto,crypto
 695,90683471,Lang & Schwarz,
-696,90661192,Libatex,Flatex
+696,90661192,Libatex,Libertex
 697,90661173,Libertex,Libertex
 698,90673533,Libertex,Libertex
 699,90685411,Libertex,Libertex
@@ -719,7 +719,7 @@ _RID,id,text_input,cluster
 717,90681099,Nasdaq,Nasdaq
 718,90680938,Nein,keine
 719,90665321,Nein,keine
-720,90685700,Neobroker,S-Broker
+720,90685700,Neobroker,
 721,90662228,Netflix,
 722,90665276,nft,
 723,90685984,nft web,
@@ -730,7 +730,7 @@ _RID,id,text_input,cluster
 728,90680827,Nix,
 729,90679893,Nordstern,
 730,90685557,ntv,
-731,90676861,Offertoro,eToro
+731,90676861,Offertoro,
 732,90675995,ok,
 733,90663328,onvista,Onvista
 734,90684480,onvista,Onvista
@@ -738,7 +738,7 @@ _RID,id,text_input,cluster
 736,90682618,Onvista,Onvista
 737,90661527,Onvista,Onvista
 738,90661986,OnVista,Onvista
-739,90674667,otore,eToro
+739,90674667,otore,
 740,90684695,plus500,Plus500
 741,90669025,plus500,Plus500
 742,90669681,plus500,Plus500
@@ -848,7 +848,7 @@ _RID,id,text_input,cluster
 846,90683159,Sport,
 847,90666598,Ssk,
 848,90669746,sskbroker,S-Broker
-849,90683365,stoker,S-Broker
+849,90683365,stoker,
 850,90676207,Storm,
 851,90680842,Stuttgarter,
 852,90684187,Super,
@@ -964,12 +964,12 @@ _RID,id,text_input,cluster
 962,90667310,Volksbank,Volksbank
 963,90672262,Volksbank,Volksbank
 964,90678297,Vorex,Forex
-965,90681393,VR-Bank,Targobank
+965,90681393,VR-Bank,
 966,90678180,VR Banken,
 967,90666973,VR-Banken,
 968,90672627,Vw,
 969,90664813,Wallstreet,
-970,90683060,Watex,Flatex
+970,90683060,Watex,
 971,90664507,weis nicht,Weiß nicht
 972,90683121,weis nicht,Weiß nicht
 973,90663895,weis nicht,Weiß nicht
@@ -1005,8 +1005,8 @@ _RID,id,text_input,cluster
 1003,90680196,xtb,
 1004,90669770,xtb,
 1005,90665182,Xxx,
-1006,90667889,Zero,Finanzen.net Zero
-1007,90684258,Zero,Finanzen.net Zero
+1006,90667889,Zero,Zero
+1007,90684258,Zero,Zero
 1008,90678021,,
 1009,90684892,!!!!!!!!,
 1010,90678719,/,
@@ -1039,7 +1039,7 @@ _RID,id,text_input,cluster
 1037,90664736,Binance,Binance
 1038,90683501,Binance,Binance
 1039,90670388,Binance,Binance
-1040,90668915,Bingx,ING
+1040,90668915,Bingx,
 1041,90674405,Bison,Bison
 1042,90661622,Bitcoin,Bitcoin
 1043,90676698,Bitcoin,Bitcoin
@@ -1053,7 +1053,7 @@ _RID,id,text_input,cluster
 1051,90671953,Bitpanda,Bitpanda
 1052,90668275,Bmw,
 1053,90680862,Boh,
-1054,90685494,boker,S-Broker
+1054,90685494,boker,
 1055,90663795,Börse,Börse
 1056,90676110,Bux,BUX
 1057,90663409,Bux,BUX
@@ -1222,8 +1222,8 @@ _RID,id,text_input,cluster
 1220,90662554,ING,ING
 1221,90670322,ING,ING
 1222,90677018,Ing depot,ING
-1223,90678608,IngDiba,ING
-1224,90673689,Ing Diba,ING
+1223,90678608,IngDiba,Ing-Diba
+1224,90673689,Ing Diba,Ing-Diba
 1225,90668735,Inter,
 1226,90672120,Invest500,
 1227,90680000,investiere gerne in zuknftsweisende aktien,
@@ -1388,7 +1388,7 @@ _RID,id,text_input,cluster
 1386,90679606,Xtracker,
 1387,90673429,Xtrend,
 1388,90665183,Yyy,
-1389,90677291,Zero,Finanzen.net Zero
+1389,90677291,Zero,Zero
 1390,90675299,Zuma,
 1391,90678720,/,
 1392,90684893,######$,
@@ -1455,7 +1455,7 @@ _RID,id,text_input,cluster
 1453,90685582,Deutsche Bank,Deutsche Bank
 1454,90676234,Deutsche Bank,Deutsche Bank
 1455,90676613,Devk,
-1456,90663517,Direktbank ING,ING
+1456,90663517,Direktbank ING,
 1457,90683012,diverse andere,
 1458,90681878,Dividenden Kalender,
 1459,90664613,dkb,DKB
@@ -1504,7 +1504,7 @@ _RID,id,text_input,cluster
 1502,90668417,ING,ING
 1503,90676561,ING,ING
 1504,90666036,Ing.de,ING
-1505,90671180,Ing diba,ING
+1505,90671180,Ing diba,Ing-Diba
 1506,90681909,Instagram,
 1507,90662230,Instagram,
 1508,90667724,iqoption,
@@ -1593,7 +1593,7 @@ _RID,id,text_input,cluster
 1591,90679279,Volksbank,Volksbank
 1592,90666125,Weiß nicht,Weiß nicht
 1593,90682704,xtb,
-1594,90676142,zero,Finanzen.net Zero
+1594,90676142,zero,Zero
 1595,90684425,Zfugiv,
 1596,90665184,Zzz,
 1597,90682025,,

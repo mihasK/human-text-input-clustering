@@ -47,6 +47,7 @@ filters_input = [
         ]), md=5),
     
     dbc.Col(dbc.InputGroup([
+
         dbc.InputGroupText('Cluster'),
         dbc.Select(id='cluster-filter',
                 #    options=[ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + list(df_original[CLUSTER_COLUMN].dropna().unique()),
@@ -116,6 +117,8 @@ table =  dash_table.DataTable(
         style_table={'height': '500px', 'overflowY': 'auto',
 
                      },
+        style_cell={'textAlign': 'left'},
+
         style_data={
             'width': '150px', 'minWidth': '150px', 'maxWidth': '150px',
             'overflow': 'hidden',
@@ -185,7 +188,7 @@ layout = html.Div([
                     dbc.Button('Deselect all', outline=True, color="secondary", className="me-1", id='deselect-all-button'), 
                 ]),
                 
-            ], md=4),
+            ], width=4),
             
             dbc.Col([
                 dbc.Button(
@@ -204,7 +207,15 @@ layout = html.Div([
                     className="position-relative",
                     id='button-set'
                 )
-            ], md=4),
+            ], width=2),
+            
+            dbc.Col([
+                dbc.Switch(
+                    id="calc_cluster_score_switch",
+                    label="Calculate similarity score to the cluster (could be slow)",
+                    value=False,
+                ),
+            ], width=2),
             
             dbc.Col([
                 dbc.Card([

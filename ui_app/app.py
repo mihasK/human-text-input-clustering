@@ -17,6 +17,7 @@ from .layout import layout
 
 
 CLUSTER_COLUMN = 'cluster'
+CLUSTER_SCORE_COLUMN = 'cluster_score'
 SCORE_COLUMN = 'search_score'
 
 ALL_CLUSTERS_FILTER_LABEL = '--ALL--'
@@ -78,7 +79,6 @@ def on_modal_set_cluster_open(is_open, selected_rows, data_select):
         State('set_cluster_input', 'value'),
         State('df-table', 'data'),
         State('data_select', 'value'),
-
     ],
         prevent_initial_call=True
 
@@ -103,14 +103,15 @@ def on_button_update_cluster_click(n, selected_rows, set_cluster_input, all_rows
     # ic(df_source_index.index)
     
     
-    ic(df_source[CLUSTER_COLUMN].unique())
     df_source.loc[
         ic(df_table['_RID']), CLUSTER_COLUMN
     ] = set_cluster_input
     
-    
-    ic(df_source[CLUSTER_COLUMN].unique())
     data_utils.write_df(df_source, d_name=data_select)
+    
+    
+    
+    
     
     return (
         f"Successfully set cluster `{set_cluster_input}` for the {len(selected_rows)} rows.",
@@ -143,12 +144,30 @@ def reload_datasource(d_name):
               
     return (
         df.columns,
-        [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + cc,
+        [ALL_CLUSTERS_FILTER_LABEL, NOT_SPECIFIED_CLUSTER_F_LABEL] + sorted(cc, key=str.lower),
         [html.Option(c) for c in cc]
     )
 
 
 from snoop import snoop
+
+        
+  
+@app.callback(
+    Output('df-table', 'style_data_conditional'),
+    Input('fuzzy-column', 'value'),  
+)
+def highlight_column(f_column):
+    return [
+            {
+                'if': {
+                    'column_id': f_column,
+                },
+                'backgroundColor': 'silver',
+                # 'color': 'white'
+                'minWidth': '300px'
+            }
+    ] 
 
 
 @app.callback(
@@ -165,10 +184,12 @@ from snoop import snoop
         Input('fuzzy-column', 'value'),
         Input('fuzzy_preprocessor_select', 'value'),
         Input('cluster-filter', 'value'),
+        Input('calc_cluster_score_switch', 'value'),
     ]
 )
 # @snoop()
-def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter):
+def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocessor_select, cluster_filter,
+                    calc_cluster_score_switch: bool):
     
     ic(d_name)
     if not d_name:
@@ -184,16 +205,17 @@ def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocess
         rdf = rdf[
             rdf[CLUSTER_COLUMN] == cluster_filter
         ]
+
+    processor = None if fuzzy_preprocessor_select == 'plain' else utils.preprocess
+    score_func = partial(
+        utils.fuzz_funcs[f_type],
+        
+        score_cutoff=f_score,
+        processor=processor
+    )
     
     if f_input:
-        processor = None if fuzzy_preprocessor_select == 'plain' else utils.preprocess
-        score_func = partial(
-            utils.fuzz_funcs[f_type],
-            s2=f_input,
-            score_cutoff=f_score,
-            processor=processor
-        )
-        rdf.loc[:,SCORE_COLUMN] = rdf[f_column].apply(score_func).round(1)
+        rdf.loc[:,SCORE_COLUMN] = rdf[f_column].apply(partial(score_func, s2=f_input)).round(1)
         rdf = rdf[
             rdf[SCORE_COLUMN] > 0
         ]
@@ -202,8 +224,17 @@ def on_search_table(d_name, f_input, f_type, f_score, f_column, fuzzy_preprocess
         # ]
     else:
         rdf.loc[:,SCORE_COLUMN] = 0  # clean this column
-        
-    ic([{"name": i, "id": i, 'hideable':True} for i in rdf.columns])
+    
+    rdf[CLUSTER_SCORE_COLUMN] = 0
+    if calc_cluster_score_switch:
+        rdf.loc[~rdf[CLUSTER_COLUMN].isnull(), CLUSTER_SCORE_COLUMN] =\
+            rdf.apply(
+                lambda row: score_func(s1=row[f_column], s2=row[CLUSTER_COLUMN]),
+                axis=1
+            )
+        rdf[CLUSTER_SCORE_COLUMN] = rdf[CLUSTER_SCORE_COLUMN].round(1)
+
+    
     return (
         rdf.to_dict('records'),
         [{"name": i, "id": i, 'hideable':True} for i in rdf.columns]
